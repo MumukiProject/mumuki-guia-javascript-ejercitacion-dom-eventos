@@ -1,1 +1,7 @@
-Crear un documento `html` que muestre un número (empezando en 0) y 6 botones con los siguientes valores: -1, +1, -5, +5, -10, +10. Cuando se clickea un botón, se tiene que sumar o restar la cantidad correspondiente, y actualizar el número mostrado.
+Necesitamos crear un contador :1234:, se espera que el mismo:
+
+  - tenga un `span` que muestre un número (que comience en 0);
+  - tenga 6 botones con los siguientes valores: : -1, +1, -5, +5, -10, +10;
+  - al clickear un botón se tiene que actualizar el valor del `span` sumando o restando la cantidad correspondiente.
+
+> Creá el código HTML y JavaScript que acabamos de describir.
