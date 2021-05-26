@@ -1,6 +1,7 @@
 /*<output#*//*#output>*/
 /*<tests#*/beforeEach(() => {
   _resetUserInteractions_();
+  _resetDocument_();
 })
 
 it("Hay un título h1 que dice Mis canciones favoritas", () => {
@@ -23,7 +24,6 @@ it("Si ingresamos 5 canciones, la lista tiene 5 canciones", function() {
 });
 
 it("Si ingresamos 'creo' como tercer canción, la lista tiene 'creo' como tercer elemento", function() {
-
   _stubPromptResponse_('cancion1');
   _stubPromptResponse_('cancion2');
   _stubPromptResponse_('creo');
