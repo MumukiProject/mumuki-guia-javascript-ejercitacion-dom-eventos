@@ -13,19 +13,14 @@ it("Inicialmente no hay ninguna canción en la lista", function() {
 });
 
 it("si ingresamos 5 canciones, la lista tiene 5 canciones", function() {
-
+  _resetDocument_();
   _stubPromptResponse_('cancion1');
   _stubPromptResponse_('cancion2');
   _stubPromptResponse_('cancion3');
   _stubPromptResponse_('cancion4');
   _stubPromptResponse_('cancion5');
-
-
-  _resetDocument_();
-
-
+  
   document.querySelector('ul li').length.should.eql(5);
-
 });
 
 it("Si ingresamos 'creo' como tercer canción, la lista tiene 'creo' como tercer elemento", function() {
