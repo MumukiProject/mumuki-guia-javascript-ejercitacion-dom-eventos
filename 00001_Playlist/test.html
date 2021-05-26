@@ -18,6 +18,7 @@ it("Si ingresamos 5 canciones, la lista tiene 5 canciones", function() {
   _stubPromptResponse_('cancion3');
   _stubPromptResponse_('cancion4');
   _stubPromptResponse_('cancion5');
+  _resetDocument_();
   
   document.querySelectorAll('ul li').length.should.eql(5);
 });
