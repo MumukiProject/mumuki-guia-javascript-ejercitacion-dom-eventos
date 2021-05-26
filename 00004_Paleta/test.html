@@ -1,4 +1,29 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/describe("", function() {
+  context("", () => {
+    describe("", () => {
+      let botonAda;
+      let botonNaranja;
+      let botonVerde;
+      let botonAmarillo;
+      beforeEach(() => {
+        _resetDocument_();
+        botonAda = document.getElementsByTagName('button')[0];
+        botonNaranja = document.getElementsByTagName('button')[1];
+        botonVerde = document.getElementsByTagName('button')[2];
+        botonAmarillo = document.getElementsByTagName('button')[3];
+      });
+      
+      
+      it("Si hacemos click sobre el botón #B71B59 el div cambia su color a #B71B59", () => {
+        _dispatch_("click", botonAda);
+
+        document.querySelector("body").should.have.style('background-color', 'rgb(183, 27, 89)');
+      });
+      
+    });
+  });  
+});
+/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
