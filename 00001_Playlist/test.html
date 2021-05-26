@@ -1,6 +1,6 @@
 /*<output#*//*#output>*/
 /*<tests#*/beforeEach(() => {
-_resetUserInteractions_();
+  _resetUserInteractions_();
 })
 
 it("Hay un título h1 que dice Mis canciones favoritas", () => {
@@ -8,39 +8,39 @@ it("Hay un título h1 que dice Mis canciones favoritas", () => {
 })
 
 it("al iniciar no hay ningún elemento en la lista", function() {
-_originalDocument_.body.should.not.contain("li");
+  _originalDocument_.body.should.not.contain("li");
 
 });
 
 it("si ingresamos 5 canciones, la lista tiene 5 canciones", function() {
 
-_stubPromptResponse_('cancion1');
-_stubPromptResponse_('cancion2');
-_stubPromptResponse_('cancion3');
-_stubPromptResponse_('cancion4');
-_stubPromptResponse_('cancion5');
+  _stubPromptResponse_('cancion1');
+  _stubPromptResponse_('cancion2');
+  _stubPromptResponse_('cancion3');
+  _stubPromptResponse_('cancion4');
+  _stubPromptResponse_('cancion5');
 
 
-_resetDocument_();
+  _resetDocument_();
 
 
-document.querySelector('ul li').length.should.eql(5);
+  document.querySelector('ul li').length.should.eql(5);
 
 });
 
 it("si ingresamos 'creo' como tercer canción, la lista tiene 'creo' como tercer elemento", function() {
 
-_stubPromptResponse_('cancion1');
-_stubPromptResponse_('cancion2');
-_stubPromptResponse_('creo');
-_stubPromptResponse_('cancion4');
-_stubPromptResponse_('cancion5');
-
-
-_resetDocument_();
-
-
-document.querySelector('li')[2].should.have.trimmed.text("creo");
+  _stubPromptResponse_('cancion1');
+  _stubPromptResponse_('cancion2');
+  _stubPromptResponse_('creo');
+  _stubPromptResponse_('cancion4');
+  _stubPromptResponse_('cancion5');
+  
+  
+  _resetDocument_();
+  
+  
+  document.querySelector('li')[2].should.have.trimmed.text("creo");
 
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
