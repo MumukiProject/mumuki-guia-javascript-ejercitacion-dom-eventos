@@ -12,7 +12,7 @@ it("Inicialmente no hay ninguna canción en la lista", function() {
 
 });
 
-it("si ingresamos 5 canciones, la lista tiene 5 canciones", function() {
+it("Si ingresamos 5 canciones, la lista tiene 5 canciones", function() {
   _resetDocument_();
   _stubPromptResponse_('cancion1');
   _stubPromptResponse_('cancion2');
@@ -20,7 +20,7 @@ it("si ingresamos 5 canciones, la lista tiene 5 canciones", function() {
   _stubPromptResponse_('cancion4');
   _stubPromptResponse_('cancion5');
   
-  document.querySelector('ul li').length.should.eql(5);
+  document.querySelectorAll('ul li').length.should.eql(5);
 });
 
 it("Si ingresamos 'creo' como tercer canción, la lista tiene 'creo' como tercer elemento", function() {
@@ -31,11 +31,9 @@ it("Si ingresamos 'creo' como tercer canción, la lista tiene 'creo' como tercer
   _stubPromptResponse_('cancion4');
   _stubPromptResponse_('cancion5');
   
-  
   _resetDocument_();
   
-  
-  document.querySelector('li')[2].should.have.trimmed.text("creo");
+  document.querySelectorAll('li')[2].should.have.trimmed.text("creo");
 
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
