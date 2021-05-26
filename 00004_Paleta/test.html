@@ -21,6 +21,12 @@
         document.querySelector("div").should.have.style('background-color', 'rgb(183, 27, 89)');
       });
       
+      it("Si hacemos click sobre el botón #FF6600 el div cambia su color a #FF6600", () => {
+        _dispatch_("click", botonNaranja);
+
+        document.querySelector("div").should.have.style('background-color', 'rgb(255, 102, 0)');
+      });
+      
     });
   });  
 });
