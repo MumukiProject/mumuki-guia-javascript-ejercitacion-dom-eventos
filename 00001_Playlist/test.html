@@ -1,4 +1,27 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("Hay un título h1 que dice Mi cuenta", () => {
+  document.querySelector("h1").should.have.trimmed.text("Mis canciones favoritas");
+})
+
+it("si ingresamos 5 canciones, la lista tiene 5 canciones", function() {
+
+_stubPromptResponse_('cancion1');
+_stubPromptResponse_('cancion2');
+_stubPromptResponse_('cancion3');
+_stubPromptResponse_('cancion4');
+_stubPromptResponse_('cancion5');
+
+
+_resetDocument_();
+
+
+document.querySelector('ul li').length.should.eql(5);
+
+});
+/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
