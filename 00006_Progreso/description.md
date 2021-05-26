@@ -1,4 +1,5 @@
 Crear un documento `html` con
+
 - una barra de progreso (con un div dentro de otro)
 - un elemento de texto que indique el progreso (p. ej. 50%)
 - dos botones, uno para incrementar y otro para dismininuir la barra (`-` y `+`)
