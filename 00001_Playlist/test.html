@@ -32,6 +32,17 @@ it("Si ingresamos 'creo' como tercer canción, la lista tiene 'creo' como tercer
   _resetDocument_();
   
   document.querySelectorAll('li')[2].should.have.trimmed.text("creo");
+});
+
+it("Si ingresamos 'frío cemento' como quinta canción, la lista tiene 'frío cemento' como quinta elemento", function() {
+  _stubPromptResponse_('cancion1');
+  _stubPromptResponse_('cancion2');
+  _stubPromptResponse_('cancion3');
+  _stubPromptResponse_('cancion4');
+  _stubPromptResponse_('frío cemento');
+  _resetDocument_();
+  
+  document.querySelectorAll('li')[4].should.have.trimmed.text("frío cemento");
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
