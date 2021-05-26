@@ -7,7 +7,7 @@ it("Hay un título h1 que dice Mis canciones favoritas", () => {
   document.querySelector("h1").should.have.trimmed.text("Mis canciones favoritas");
 })
 
-it("al iniciar no hay ningún elemento en la lista", function() {
+it("Inicialmente no hay ninguna canción en la lista", function() {
   _originalDocument_.body.should.not.contain("li");
 
 });
@@ -28,7 +28,7 @@ it("si ingresamos 5 canciones, la lista tiene 5 canciones", function() {
 
 });
 
-it("si ingresamos 'creo' como tercer canción, la lista tiene 'creo' como tercer elemento", function() {
+it("Si ingresamos 'creo' como tercer canción, la lista tiene 'creo' como tercer elemento", function() {
 
   _stubPromptResponse_('cancion1');
   _stubPromptResponse_('cancion2');
