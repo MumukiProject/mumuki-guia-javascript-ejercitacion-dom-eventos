@@ -27,6 +27,21 @@ _resetDocument_();
 document.querySelector('ul li').length.should.eql(5);
 
 });
-/*#tests>*/
+
+it("si ingresamos 'creo' como tercer canción, la lista tiene 'creo' como tercer elemento", function() {
+
+_stubPromptResponse_('cancion1');
+_stubPromptResponse_('cancion2');
+_stubPromptResponse_('creo');
+_stubPromptResponse_('cancion4');
+_stubPromptResponse_('cancion5');
+
+
+_resetDocument_();
+
+
+document.querySelector('li')[2].should.have.trimmed.text("creo");
+
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
