@@ -43,6 +43,18 @@ it("Si ingresamos 'frío cemento' como quinta canción, la lista tiene 'frío ce
   _resetDocument_();
   
   document.querySelectorAll('li')[4].should.have.trimmed.text("frío cemento");
+});
+
+it("Solo debe haber 5 canciones en la lista", function() {
+  _stubPromptResponse_('cancion1');
+  _stubPromptResponse_('cancion2');
+  _stubPromptResponse_('cancion3');
+  _stubPromptResponse_('cancion4');
+  _stubPromptResponse_('cancion5');
+  _stubPromptResponse_('wish you were here');
+  _resetDocument_();
+  
+  document.querySelectorAll('ul li').length.should.eql(5);
 });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
