@@ -14,6 +14,12 @@
       document.querySelector("h2").should.have.trimmed.text("Bandeja de entrada");
       })
       
+      it("Si clickeamos el segundo li se pone de color gris", () => {
+        let segundoLi = document.getElementsByTagName("li")[1];
+        _dispatch_("click",  segundoLi);
+        document.getElementsByTagName('li')[2].should.have.style('Color', 'grey');
+      });
+      
     });
   });  
 });
