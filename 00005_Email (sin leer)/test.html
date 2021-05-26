@@ -1,4 +1,22 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/describe("", function() {
+  context("", () => {
+    describe("", () => {
+      beforeEach(() => {
+        _resetDocument_();
+      });
+      
+      it("Hay un título h1 que dice Mis emails", () => {
+      document.querySelector("h1").should.have.trimmed.text("Mis emails");
+      })
+      
+      it("Hay un título h2 que dice Bandeja de entrada", () => {
+      document.querySelector("h2").should.have.trimmed.text("Bandeja de entrada");
+      })
+      
+    });
+  });  
+});
+/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
