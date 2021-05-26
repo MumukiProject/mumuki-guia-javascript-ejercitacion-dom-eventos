@@ -1,11 +1,28 @@
 /*<output#*//*#output>*/
-/*<tests#*/beforeEach(() => {
-  _resetUserInteractions_();
-})
+/*<tests#*/befdescribe("", function() {
+  context("", () => {
+    describe("", () => {
+      beforeEach(() => {
+        _resetDocument_();
+      });
+      
+      it("Inicialmente el span muestra el número 0", () => {
+      document.querySelector("span").should.have.trimmed.text("0");
+      })
+      
+      it("Si hacemos click sobre el botón +10 y luego sobre el botón -5 el span muestra 5", () => {
+        const botonMenosCinco = document.getElementsByTagName("button")[2];
+        const botonDiez = document.getElementsByTagName("button")[5];
 
-it("Inicialmente el span muestra el número 0", () => {
-  document.querySelector("span").should.have.trimmed.text("0");
-})
+        _dispatch_("click", botonMenosCinco);
+        _dispatch_("click", botonDiez);
+
+        document.querySelector("span").should.have.trimmed.text("5");
+      });
+      
+    });
+  });  
+});
 /*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
