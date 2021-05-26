@@ -1,1 +1,3 @@
-Crear un documento `html` que tenga 6 botones con un color de fondo distinto, y un `div` cuadrado grande. Cuando se clickea un botón, el `div` debe cambiar su color de fondo al mismo color de fondo que el del botón clickeado.
+En el HTML de este ejercicio contamos con un `div` cuadrado y 4 botones con colores.
+
+> Desarrollá en `script.js` la lógica necesaria para que al hacer click en un botón cambie el color de fondo del `div` por el que aparece en el botón clickeado.
