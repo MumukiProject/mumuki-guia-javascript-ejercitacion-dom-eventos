@@ -1,4 +1,11 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("Inicialmente el span muestra el número 0", () => {
+  document.querySelector("span").should.have.trimmed.text("0");
+})
+/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
