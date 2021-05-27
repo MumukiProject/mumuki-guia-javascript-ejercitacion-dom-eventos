@@ -3,7 +3,7 @@
   context("", () => {
     describe("", () => {
       beforeEach(() => {
-        _resetDocument_();
+        _resetUserInteractions_();
       });
       
       it("Hay un título h1 que dice Mis emails", () => {
@@ -17,6 +17,8 @@
       it("Si clickeamos el segundo li se pone de color gris", () => {
         let segundoLi = document.getElementsByTagName("li")[1];
         _dispatch_("click",  segundoLi);
+
+         _resetDocument_();
         document.querySelectorAll('li')[1].should.have.style('color', 'grey');
       });
       
