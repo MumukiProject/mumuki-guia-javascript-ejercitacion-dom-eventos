@@ -30,7 +30,25 @@
         document.querySelector("span").should.have.trimmed.text("6");
       });
       
-      //Agregar dos casos más de test
+      it("Si hacemos click sobre el botón -10 y luego sobre el botón -5 el span muestra -15", () => {
+        const botonMenosDiez = document.getElementsByTagName("button")[4];
+        const botonMemosCinco = document.getElementsByTagName("button")[2];
+
+        _dispatch_("click", botonMenosDiez);
+        _dispatch_("click", botonMemosCinco);
+
+        document.querySelector("span").should.have.trimmed.text("-15");
+      });
+      
+      it("Si hacemos click sobre el botón -1 y luego sobre el botón +1 el span muestra 0", () => {
+        const botonMenosUno = document.getElementsByTagName("button")[0];
+        const botonUno = document.getElementsByTagName("button")[1];
+
+        _dispatch_("click", botonMenosUno);
+        _dispatch_("click", botonUno);
+
+        document.querySelector("span").should.have.trimmed.text("0");
+      });
     });
   });  
 });
