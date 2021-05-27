@@ -17,7 +17,7 @@
       it("Si clickeamos el segundo li se pone de color gris", () => {
         let segundoLi = document.getElementsByTagName("li")[1];
         _dispatch_("click",  segundoLi);
-        document.querySelectorAll('li')[2].should.have.style('Color', 'grey');
+        document.querySelectorAll('li')[2].should.have.style('color', 'grey');
       });
       
     });
