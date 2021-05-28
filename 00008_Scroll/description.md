@@ -1,4 +1,4 @@
-Crear un documento `html` con un `body` de 4000px de alto. Cuando se scrollea el `body`, cambiar el color de fondo cada 500px, por ejemplo:
+Necesitamos crear una página que cambie el color del `body` cuando se scrollea en él teniendo en cuenta la siguiente tabla:
 
 |Scroll|Color de fondo|
 | --- | --- |
