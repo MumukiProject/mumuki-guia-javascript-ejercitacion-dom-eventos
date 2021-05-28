@@ -1,1 +1,8 @@
-Crear dos contenedores, uno para imágenes y otro para favoritos. En el contenedor de imágenes, agregar al menos 10 imágenes (cualesquiera). Al clickear una imagen en el contenedor de imágenes, se debe agregar la misma imagen en el contenedor de favoritos. Al clickear una imagen en el contenedor de favoritos, se debe eliminar  la imagen seleccionada de dicho contenedor.
+Necesitamos crear una página para poder seleccionar nuestras imágenes favoritas, para ello, se espera que la misma:
+
+- tenga dos contenedores, el primero con un título `h1` que diga “Imágenes” y el segundo con un título `h1` que diga “Favoritas”;
+- el contenedor de imágenes debe tener 10 imágenes;
+- al clickear una de las imágenes del contenedor de imágenes se debe agregar al contenedor de favoritas;
+- al clickear una imagen del contenedor de favoritas, se debe eliminar la imagen seleccionada de dicho contenedor. 
+
+> Creá el código HTML y JavaScript para lograr el comportamiento que acabamos de describir.
