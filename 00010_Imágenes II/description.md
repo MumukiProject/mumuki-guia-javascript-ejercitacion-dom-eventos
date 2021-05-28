@@ -1,1 +1,3 @@
-Repetir el ejercicio anterior, pero en vez de cambiar la imagen grande cuando se clickean las imágenes chicas, hacerlo cuando se pasa el mouse por encima de las imágenes chicas.
+> Modificá el código del ejercicio anterior para que en vez de modificarse al imágenes al hacer click, lo hagan al pasar el mouse por encima.
+
+
