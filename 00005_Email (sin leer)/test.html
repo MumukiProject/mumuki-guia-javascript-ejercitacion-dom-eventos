@@ -21,6 +21,13 @@
         document.querySelectorAll('li')[1].should.have.style('color', 'grey');
       });
       
+      it("Si clickeamos el tercer li deja de estar en negrita", () => {
+        let tercerLi = document.querySelectorAll("li")[2];
+        _dispatch_("click",  tercerLi);
+
+        document.querySelectorAll('li')[2].should.have.style('fontWeight', 'normal');
+      });
+      
     });
   });  
 });
