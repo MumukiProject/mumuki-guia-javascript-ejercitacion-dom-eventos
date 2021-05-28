@@ -4,7 +4,7 @@ Queremos crear un programa que genere un número aleatorio entre 0 y 9. Cuando s
 - si el número seleccionado es más chico que el número aleatorio generado, debe mostrar `El número es más grande`;
 - si el número seleccionado es igual al número aleatorio generado, debe mostrar `Adivinaste`.
 
-El mensaje también debe incluir el número ingresado (por ejemplo, `Número ingresado: 3`). 
+En todos los casos el mensaje también debe incluir el número ingresado (por ejemplo, `Número ingresado: 3`). 
 
 Por ejemplo:
 
