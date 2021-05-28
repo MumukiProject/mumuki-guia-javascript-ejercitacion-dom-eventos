@@ -6,3 +6,5 @@ Necesitamos crear una página que cambie el color del `body` cuando se scrollea 
 | 1001px - 2000px | green
 | 2001px - 3000px | blue
 | 3001px - 4000px | orange
+
+> Creá el código HTML y JavaScript para lograr el comportamiento que acabamos de describir.
