@@ -18,6 +18,6 @@ El número presionado fue 7
 "Adivinaste. Número ingresado: 7"
 ```
 
-El documento también debe tener un botón que diga `Reiniciar`, que genere un nuevo número y actualice el mensaje para indicarlo (por ejemplo `¡Nueva partida! Presione un número.`
+El `span` inicialmente debe decir `¡Nueva partida! Presione un número.`. El documento también debe tener un botón que diga `Reiniciar`, que genere un nuevo número aleatorio y reinice el texto del `span` a su contenido inicial. 
 
 > Creá el código HTML y JavaScript que acabamos de describir.
