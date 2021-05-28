@@ -1,4 +1,4 @@
-Vamos a crear una página para jugar a resolver una pregunta. Se espera que la misma:
+Vamos a crear una página para jugar a resolver una pregunta :question:. Se espera que la misma:
 
 - tenga un texto con una pregunta, o adivinanza;
 - tenga tres botones con posibles respuestas;
