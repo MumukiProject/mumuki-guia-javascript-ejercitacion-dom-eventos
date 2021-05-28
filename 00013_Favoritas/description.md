@@ -1,4 +1,4 @@
-Necesitamos crear una página para poder seleccionar nuestras imágenes favoritas, para ello, se espera que la misma:
+Necesitamos crear una página para poder seleccionar nuestras imágenes favoritas que:
 
 - tenga dos contenedores, el primero con un título `h1` que diga “Imágenes” y el segundo con un título `h1` que diga “Favoritas”;
 - el contenedor de imágenes debe tener 10 imágenes;
