@@ -47,10 +47,15 @@
             
             document.querySelector("button[value = 'correcto']").should.have.style('backgroundColor', 'green');
           })
+          
+          it("Al clickear un botón incorrecto se muestra en el segundo span ¡Respuesta incorrecta!.", () => {
+            
+            _dispatch_("click", botonIncorrectoUno);
+            
+            document.querySelectorAll("span")[1].should.have.trimmed.text("¡Respuesta incorrecta!");
+          })
 
 
-// Que clickear el correcto me cambie el segundo span
-// Que clickear el correcto me cambie el fondo del boton correcto
 // Que clickear un incorrecto me cambie el fondo de todos los botones
 // Que clickear un incorrecto me cambie el segundo span
 
