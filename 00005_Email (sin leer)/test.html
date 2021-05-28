@@ -66,9 +66,7 @@
       li9.should.have.style('color', 'black');
       li10.should.have.style('color', 'black');
       })
-    
-    //Que inicialmente sean de color negro
-    //Si clickeamos dos li se ponen de color gris
+      
     //Si clickeamos tres li dejan de estar en negrita
 
       it("Si clickeamos el segundo li se pone de color gris", () => {
@@ -84,8 +82,24 @@
         document.querySelectorAll('li')[2].should.have.style('fontWeight', 'normal');
       });
       
-      
-      
+      it("Si clickeamos dos li se ponen de color gris", () => {
+        _dispatch_("click",  li8);
+        _dispatch_("click",  li9);
+
+        document.querySelectorAll("li")[7].should.have.style('color', 'grey');
+        document.querySelectorAll("li")[8].should.have.style('color', 'grey');
+      });
+        
+      it("Si clickeamos tres li dejan de estar en negrita", () => {
+        
+        _dispatch_("click",  li4);
+        _dispatch_("click",  li5);
+        _dispatch_("click",  li10);
+
+        document.querySelectorAll('li')[3].should.have.style('fontWeight', 'normal');
+        document.querySelectorAll('li')[4].should.have.style('fontWeight', 'normal');
+        document.querySelectorAll('li')[9].should.have.style('fontWeight', 'normal');
+      });
       
       
     });
