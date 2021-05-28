@@ -54,13 +54,15 @@
             
             document.querySelectorAll("span")[1].should.have.trimmed.text("¡Respuesta incorrecta!");
           })
-
-
-// Que clickear un incorrecto me cambie el fondo de todos los botones
-// Que clickear un incorrecto me cambie el segundo span
-
-/*document.querySelectorAll("button[value='incorrecto']").length*/
-      
+          
+          it("Al clickear un botón incorrecto todos los botones cambian de color.", () => {
+            
+            _dispatch_("click", botonIncorrectoDos);
+            
+            document.querySelector("button[value = 'correcto']").should.have.style('backgroundColor', 'green');
+            document.querySelectorAll("button[value = 'incorrecto']")[0].should.have.style('backgroundColor', 'red');
+            document.querySelector("button[value = 'incorrecto']")[1].should.have.style('backgroundColor', 'red');
+          })
 
     });
   });  
