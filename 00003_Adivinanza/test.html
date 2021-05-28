@@ -40,6 +40,13 @@
             
             document.querySelectorAll("span")[1].should.have.trimmed.text("¡Respuesta correcta!");
           })
+          
+          it("Al clickear el botón correcto cambia de color a verde", () => {
+            
+            _dispatch_("click", botonCorrecto);
+            
+            document.querySelector("button[value = 'correcto']").should.have.style('backgroundColor', 'green');
+          })
 
 
 // Que clickear el correcto me cambie el segundo span
