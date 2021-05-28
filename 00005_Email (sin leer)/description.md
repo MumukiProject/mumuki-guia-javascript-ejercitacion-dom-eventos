@@ -1,7 +1,7 @@
 Queremos crear una página que nos ayude a identificar los mails que ya fueron leídos, se espera que la misma tenga:
 
-- un título `h1` que diga: `Mis emails`;
-- un título `h2` que diga: `Bandeja de entrada`;
+- un título `h1` que diga `Mis emails`;
+- un título `h2` que diga `Bandeja de entrada`;
 - una lista desordenada con 10 ítems con `lorem ipsum` (4 o 5 palabras cada uno, no un párrafo entero).
 
 :warning: Consideraciones:
