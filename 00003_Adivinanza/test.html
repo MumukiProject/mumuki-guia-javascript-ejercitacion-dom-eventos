@@ -29,7 +29,7 @@
           })
           
           it("Hay dos botones que tienen el atributo value = 'incorrecto' ", () => {
-            document.querySelector("button[value='incorrecto']").length.should.eql(2);
+            document.querySelectorAll("button[value='incorrecto']").length.should.eql(2);
           })
           
           it("Al clickear el botón correcto el span muestra ¡Respuesta correcta!", () => {
