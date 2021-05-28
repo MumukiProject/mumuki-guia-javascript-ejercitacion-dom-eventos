@@ -48,11 +48,11 @@
             document.querySelector("button[value = 'correcto']").should.have.style('backgroundColor', 'green');
           })
           
-          it("Al clickear un botón incorrecto se muestra en el segundo span ¡Respuesta incorrecta!.", () => {
+          it("Al clickear un botón incorrecto se muestra en el segundo span ¡Respuesta equivocada!.", () => {
             
             _dispatch_("click", botonIncorrectoUno);
             
-            document.querySelectorAll("span")[1].should.have.trimmed.text("¡Respuesta incorrecta!");
+            document.querySelectorAll("span")[1].should.have.trimmed.text("¡Respuesta equivocada!");
           })
           
           it("Al clickear un botón incorrecto todos los botones cambian de color.", () => {
