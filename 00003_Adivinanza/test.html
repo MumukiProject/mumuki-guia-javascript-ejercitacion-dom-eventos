@@ -34,12 +34,12 @@
             document.querySelectorAll("button[value='incorrecto']").length.should.eql(2);
           })
           
-          it("Al clickear el botón correcto el span muestra ¡Respuesta correcta!", () => {
+          it("Al clickear el botón correcto el segundo span muestra ¡Respuesta correcta!", () => {
             let botonCorrecto = document.querySelector("button[value='correcto']");
             
             _dispatch_("click", botonCorrecto);
             
-            document.querySelector("span").should.have.trimmed.text("¡Respuesta correcta!");
+            document.querySelector("span")[1].should.have.trimmed.text("¡Respuesta correcta!");
           })
 
 
