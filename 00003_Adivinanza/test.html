@@ -1,6 +1,19 @@
 /*<output#*//*#output>*/
-/*<tests#*/// Hay 2 spans
-// Hay 3 botones
+/*<tests#*/it("Hay dos span", () => {
+  document.getElementsByTagName("span").length.should.eql(2);
+})
+
+it("Hay tres botones", () => {
+  document.getElementsByTagName("button").length.should.eql(3);
+})
+
+it("Hay tres botones", () => {
+  document.getElementsByTagName("button").length.should.eql(3);
+})
+
+it("Hay un botón que tiene el atributo value = 'correcto' ", () => {
+  document.querySelector("button[value = 'correcto'").should.exist;
+})
 // Hay un boton que tenga value correcto
 // Hay dos botones que tengan value incorrecto
 // Que clickear el correcto me cambie el segundo span
@@ -8,6 +21,6 @@
 // Que clickear un incorrecto me cambie el fondo de todos los botones
 // Que clickear un incorrecto me cambie el segundo span
 
-document.querySelectorAll("button[value='incorrecto']").length/*#tests>*/
+/*document.querySelectorAll("button[value='incorrecto']").length*//*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
