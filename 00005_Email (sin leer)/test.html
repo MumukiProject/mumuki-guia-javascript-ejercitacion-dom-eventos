@@ -25,7 +25,7 @@
         let segundoLi = document.querySelectorAll("li")[1];
         _dispatch_("click",  segundoLi);
 
-        document.querySelectorAll('li')[1].should.have.style('color', 'grey');
+        segundoLi.should.have.style('color', 'grey');
       });
       
       it("Si clickeamos el tercer li deja de estar en negrita", () => {
