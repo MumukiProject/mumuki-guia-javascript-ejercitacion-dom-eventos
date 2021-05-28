@@ -1,4 +1,4 @@
-Necesitamos crear una página para filtrar las películas por los géneros acción, aventura, ficción. Para ello, se espera que la misma:
+Necesitamos crear una página para filtrar las películas :projector: por los géneros acción, aventura, ficción. Para ello, se espera que la misma:
 
 - tenga 12 imágenes de poster de películas, 4 películas por género;
 - tenga un botón por género, y un botón que diga “Todas”;
