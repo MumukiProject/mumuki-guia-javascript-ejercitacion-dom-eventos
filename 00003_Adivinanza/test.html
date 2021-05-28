@@ -57,9 +57,9 @@
           
           it("Al clickear un botón incorrecto todos los botones cambian de color.", () => {
             
-            _dispatch_("click", botonIncorrectoDos);
+            _dispatch_("click", botonIncorrectoUno);
             
-           /* document.querySelector("button[value = 'correcto']").should.have.style('backgroundColor', 'green');*/
+            document.querySelector("button[value = 'correcto']").should.have.style('backgroundColor', 'green');
             
             document.querySelectorAll("button[value = 'incorrecto']")[0].should.have.style('backgroundColor', 'red');
             
