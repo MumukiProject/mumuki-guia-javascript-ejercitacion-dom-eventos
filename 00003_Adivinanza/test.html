@@ -59,11 +59,11 @@
             
             _dispatch_("click", botonIncorrectoUno);
             
-            document.querySelector("button[value = 'correcto']").should.have.style('backgroundColor', 'green');
+            botonCorrecto.should.have.style('backgroundColor', 'green');
             
-            document.querySelectorAll("button[value = 'incorrecto']")[0].should.have.style('backgroundColor', 'red');
+            document.querySelectorAll("button[value= 'incorrecto']")[0].should.have.style('backgroundColor', 'red');
             
-            document.querySelector("button[value = 'incorrecto']")[1].should.have.style('backgroundColor', 'red');
+            document.querySelector("button[value= 'incorrecto']")[1].should.have.style('backgroundColor', 'red');
           })
 
     });
