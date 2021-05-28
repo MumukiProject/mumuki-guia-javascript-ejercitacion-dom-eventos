@@ -6,6 +6,7 @@
       let botonIncorrectoUno;
       let botonIncorrectoDos;
       beforeEach(() => {
+        
         botonCorrecto = document.querySelector("button[value='correcto']");
         botonIncorrectoUno = document.querySelectorAll("button[value='incorrecto']"[0]);
         botonIncorrectoDos = document.querySelectorAll("button[value='incorrecto']"[1]);
@@ -34,6 +35,7 @@
           
           it("Al clickear el botón correcto el span muestra ¡Respuesta correcta!", () => {
             _dispatch_("click", botonCorrecto);
+            _resetDocument_();
             document.querySelector("span").should.have.trimmed.text(" ¡Respuesta correcta!");
           })
 
