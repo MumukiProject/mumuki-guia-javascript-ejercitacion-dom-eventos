@@ -14,7 +14,11 @@
       document.querySelector("h2").should.have.trimmed.text("Bandeja de entrada");
       })
       
-      it("Si clickeamos el segundo li se pone de color gris", () => {
+      it("Hay diez li", () => {
+      document.getElementsByTagName("li").length.should.eql(10);
+    })
+    
+    /*it("Si clickeamos el segundo li se pone de color gris", () => {
         let segundoLi = document.querySelectorAll("li")[1];
         _dispatch_("click",  segundoLi);
 
@@ -26,7 +30,7 @@
         _dispatch_("click",  tercerLi);
 
         document.querySelectorAll('li')[2].should.have.style('fontWeight', 'normal');
-      });
+      });*/
       
     });
   });  
