@@ -44,7 +44,8 @@ describe("", function() {
         it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
           
           _dispatch_("click",  botonSuma);
-       document.getElementById('barra').should.have.style('width','20%');
+          document.querySelector("span").should.have.trimmed.text("20%");
+       //document.getElementById('barra').should.have.style('width','20%');
         })
 
     });
