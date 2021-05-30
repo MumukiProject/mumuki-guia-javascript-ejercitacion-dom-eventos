@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
 /*<tests#*//*
-- Que este el span y que diga 0% inicialmente.
-- Que estén los dos botones 
 - Que al apretar el boton + dos veces cambie a 20% el width
 - Que al apretar el boton + 4 veces sume 40% al span
 - Que al apretar el boton - una vez disminuya 10% el width
@@ -36,6 +34,10 @@ describe("", function() {
         
       it("El span inicialmente muestra 0%", () => {
        document.querySelector("span").should.have.trimmed.text("0%");
+        })
+        
+      it("Hay dos botones", () => {
+       document.getElementsByTagName("button").length.should.eql(2);
         })
     });
   });  
