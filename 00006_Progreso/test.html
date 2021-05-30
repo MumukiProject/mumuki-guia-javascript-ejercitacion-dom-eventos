@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
 /*<tests#*//*
-- Que este el div contenedor
-- Que este el div barra
 - Que este el span y que diga 0% inicialmente.
 - Que estén los dos botones 
 - Que al apretar el boton + dos veces cambie a 20% el width
@@ -26,6 +24,18 @@ describe("", function() {
 
       it("Hay un div con el id contenedor", () => {
        document.getElementById("contenedor").should.have.exist;
+        })
+        
+      it("Hay un div con el id barra", () => {
+       document.getElementById("barra").should.have.exist;
+        })
+        
+      it("Hay un span", () => {
+       document.querySelector("span").should.have.exist;
+        })
+        
+      it("El span inicialmente muestra 0%", () => {
+       document.querySelector("span").should.have.trimmed.text("Mi cuenta");
         })
     });
   });  
