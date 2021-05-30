@@ -13,7 +13,8 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
-      
+      let botonResta = document.querySelectorAll('buton')[0];
+      let botonSuma = document.querySelectorAll('buton')[1];
       beforeEach(() => {
         _resetUserInteractions_();
         _resetDocument_();
@@ -39,6 +40,13 @@ describe("", function() {
       it("Hay dos botones", () => {
        document.getElementsByTagName("button").length.should.eql(2);
         })
+        
+        it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
+          
+          _dispatch_("click",  botonSuma);
+       document.getElementById('barra').should.have.style('width','20%');
+        })
+
     });
   });  
 });
