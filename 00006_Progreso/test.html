@@ -13,9 +13,14 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
-      let botonResta = document.querySelectorAll('buton')[0];
-      let botonSuma = document.querySelectorAll('buton')[1];
+      let botonResta 
+      let botonSuma
+      
       beforeEach(() => {
+        
+        botonResta= document.querySelectorAll('buton')[0];
+        botonSuma = document.querySelectorAll('buton')[1];
+        
         _resetUserInteractions_();
         _resetDocument_();
 
@@ -44,6 +49,7 @@ describe("", function() {
         it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
           
           _dispatch_("click",  botonSuma);
+          
           document.querySelector("span").should.have.trimmed.text("20%");
        //document.getElementById('barra').should.have.style('width','20%');
         })
