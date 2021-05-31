@@ -81,6 +81,13 @@ describe("", function() {
         img12.should.be.visible;
       });
       
+      it("Si clickeamos el botón de Ficción, se muestran solo las imágenes de fición", () => {
+        let ficcion = document.getElementById('ficcion');
+        _dispatch_("click",  ficcion);
+        document.querySelectorAll("img[class='ficcion']").should.be.visible;
+        
+      });
+      
     });
   });  
 });/*#tests>*/
