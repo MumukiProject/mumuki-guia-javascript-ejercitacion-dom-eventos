@@ -72,22 +72,22 @@
       it("Si clickeamos el segundo li se pone de color gris", () => {
         _dispatch_("click",  li2);
 
-        document.querySelectorAll("li")[1].should.have.style('color', 'grey');
+        li2.should.have.style('color', 'grey');
       });
       
       it("Si clickeamos el tercer li deja de estar en negrita", () => {
         
         _dispatch_("click",  li3);
 
-        document.querySelectorAll('li')[2].should.have.style('fontWeight', 'normal');
+        li3.should.have.style('fontWeight', 'normal');
       });
       
       it("Si clickeamos dos li se ponen de color gris", () => {
         _dispatch_("click",  li8);
         _dispatch_("click",  li9);
 
-        document.querySelectorAll("li")[7].should.have.style('color', 'grey');
-        document.querySelectorAll("li")[8].should.have.style('color', 'grey');
+        li8.should.have.style('color', 'grey');
+        li9.should.have.style('color', 'grey');
       });
         
       it("Si clickeamos tres li dejan de estar en negrita", () => {
@@ -96,7 +96,6 @@
         _dispatch_("click",  li5);
         _dispatch_("click",  li10);
         
-        li3.should.have.style('fontWeight', 'bold')
         li4.should.have.style('fontWeight', 'normal');
         li5.should.have.style('fontWeight', 'normal');
         li10.should.have.style('fontWeight', 'normal');
