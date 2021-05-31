@@ -1,6 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///Hay cuatro imágenes por cada género.
-//Al clickear el botón de "Todas" se visualizan todas las imágenes.
+/*<tests#*///Al clickear el botón de "Todas" se visualizan todas las imágenes.
 //Al clickear el botón del género acción solo se muestran las imágenes correspondientes a esa clase.
 
 //Al clickear el botón del género aventura solo se muestran las imágenes correspondientes a esa clase.
@@ -11,8 +10,32 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
+      let img1;
+      let img2;
+      let img3;
+      let img4;
+      let img5;
+      let img6;
+      let img7;
+      let img8;
+      let img9;
+      let img10;
+      let img11;
+      let img12;
       beforeEach(() => {
         _resetDocument_();
+        img1 = document.querySelectorAll('img')[0];
+        img2 = document.querySelectorAll('img')[1];
+        img3 = document.querySelectorAll('img')[2];
+        img4 = document.querySelectorAll('img')[3];
+        img5 = document.querySelectorAll('img')[4];
+        img6 = document.querySelectorAll('img')[5];
+        img7 = document.querySelectorAll('img')[6];
+        img8 = document.querySelectorAll('img')[7];
+        img9 = document.querySelectorAll('img')[8];
+        img10 = document.querySelectorAll('img')[9];
+        img11 = document.querySelectorAll('img')[10];
+        img12 = document.querySelectorAll('img')[11];
       });
       
       it("Hay doce imágenes", () => {
@@ -36,6 +59,12 @@ describe("", function() {
       });
       
       it("Hay cuatro imágenes por género", () => {
+        document.getElementsByClassName('accion').length.should.eql(4);
+        document.getElementsByClassName('ficcion').length.should.eql(4);
+        document.getElementsByClassName('aventura').length.should.eql(4);
+      });
+      
+      it("Si clickeamos el botón de Todas, se muestran todas las imágenes", () => {
         document.getElementsByClassName('accion').length.should.eql(4);
         document.getElementsByClassName('ficcion').length.should.eql(4);
         document.getElementsByClassName('aventura').length.should.eql(4);
