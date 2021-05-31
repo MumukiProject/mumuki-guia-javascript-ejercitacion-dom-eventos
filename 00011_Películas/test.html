@@ -81,7 +81,7 @@ describe("", function() {
         img12.should.be.visible;
       });
       
-      it("Si clickeamos el botón de Ficción, se muestran solo las imágenes de fición", () => {
+      it("Si clickeamos el botón de Ficción, se muestran solo las imágenes de ficción", () => {
         let ficcion = document.getElementById('ficcion');
         _dispatch_("click",  ficcion);
         document.querySelectorAll("img[class='ficcion']")[0].should.be.visible;
@@ -90,6 +90,28 @@ describe("", function() {
         document.querySelectorAll("img[class='ficcion']")[3].should.be.visible;
         document.querySelectorAll("img[class='accion']")[0].should.not.be.visible;
         document.querySelectorAll("img[class='aventura']")[3].should.not.be.visible;
+      });
+      
+      it("Si clickeamos el botón de Acción, se muestran solo las imágenes de acción", () => {
+        let ficcion = document.getElementById('accion');
+        _dispatch_("click",  accion);
+        document.querySelectorAll("img[class='accion']")[0].should.be.visible;
+        document.querySelectorAll("img[class='accion']")[1].should.be.visible;
+        document.querySelectorAll("img[class='accion']")[2].should.be.visible;
+        document.querySelectorAll("img[class='accion']")[3].should.be.visible;
+        document.querySelectorAll("img[class='ficcion']")[2].should.not.be.visible;
+        document.querySelectorAll("img[class='aventura']")[1].should.not.be.visible;
+      });
+      
+      it("Si clickeamos el botón de Aventura, se muestran solo las imágenes de aventura", () => {
+        let ficcion = document.getElementById('aventura');
+        _dispatch_("click",  aventura);
+        document.querySelectorAll("img[class='aventura']")[0].should.be.visible;
+        document.querySelectorAll("img[class='aventura']")[1].should.be.visible;
+        document.querySelectorAll("img[class='aventura']")[2].should.be.visible;
+        document.querySelectorAll("img[class='aventura']")[3].should.be.visible;
+        document.querySelectorAll("img[class='ficcion']")[3].should.not.be.visible;
+        document.querySelectorAll("img[class='accion']")[0].should.not.be.visible;
       });
       
     });
