@@ -32,14 +32,8 @@
       it("Al clickear modo oscuro el color de fondo del body es negro", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
-        document.getElementsByClassName('far fa-sun')[0].visibility = "visible";
+       
         document.querySelector("body").should.have.style('background-color', 'black');
-      });
-      
-      it("Al clickear modo oscuro el color del texto es blanco", () => {
-        let boton = document.querySelector('button');
-        _dispatch_('click',  boton);
-        document.querySelector("p").should.have.style('color', 'white');
       });
       
       it("Al clickear modo oscuro se visualiza el ícono del sol", () => {
@@ -67,13 +61,6 @@
         _dispatch_("click",  boton);
         _dispatch_("click",  boton);
         document.querySelector("body").should.have.style('background-color', 'white');
-      });
-      
-      it("Al clickear modo claro el color del texto es negro", () => {
-        let boton = document.querySelector('button');
-        _dispatch_('click',  boton);
-        _dispatch_("click",  boton);
-        document.querySelector("p").should.have.style('color', 'black');
       });
       
       it("Al clickear modo claro se oculta el ícono del sol", () => {
