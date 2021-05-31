@@ -1,9 +1,130 @@
 /*<output#*//*#output>*/
-/*<tests#*/// Hay cuatro imágenes con 100px de alto
+/*<tests#*/
 // Hay una imagen con 500 px de alto
 // Si clickeamos una imagen de 100px, se actualiza con 500px
 //si clickeamos una imagen de 100px, la imagen que tenía 500 px ahora tiene 100 px.
 
-//Si clickeamos una imagen de 100px, se actualiza con 500px, pero si clickeamos otra vuelve a tener 100px/*#tests>*/
+//Si clickeamos una imagen de 100px, se actualiza con 500px, pero si clickeamos otra vuelve a tener 100px
+
+describe("", function() {
+  context("", () => {
+    describe("", () => {
+      let img1;
+      let img2;
+      let img3;
+      let img4;
+      
+      beforeEach(() => {
+        _resetDocument_();
+        img1 = document.createElement('img');
+        img2 = document.createElement('img');
+        img3 = document.createElement('img');
+        img4 = document.createElement('img');
+      
+        document.body.appendChild(img1);
+        document.body.appendChild(img2);
+        document.body.appendChild(img3);
+        document.body.appendChild(img4);
+      
+      });
+      
+      
+      it("Hay 4 imágenes con 100px de alto", () => {
+        _resetDocument_();
+
+        document.querySelectorAll('img')[0].should.have.style('height', '100px');
+        document.querySelectorAll('img')[1].should.have.style('height', '100px');
+        document.querySelectorAll('img')[2].should.have.style('height', '100px');
+        document.querySelectorAll('img')[3].should.have.style('height', '100px');
+      });
+      
+      it("Hay 1 imagen con 500px de alto", () => {
+        _resetDocument_();
+
+        document.querySelectorAll('img')[4].should.have.style('height', '500px');
+      });
+      
+      
+      /*it("Si seleccionamos comidas y paisajes y tenemos tres imágenes con categoría comidas y dos con categoría paisajes se muestran solo las cinco imágenes", () => {
+        animales.checked = false;
+        comidas.checked = true;
+        paisajes.checked = true;
+        _dispatch_("click", animales);
+        _dispatch_("click", comidas);
+        _dispatch_("click", paisajes);
+
+        img1.should.not.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
+      });
+      
+      it("Si seleccionamos paisajes y tenemos dos imágenes con la categoría paisajes se muestran solo las dos imágenes", () => {
+        animales.checked = false;
+        comidas.checked = false;
+        paisajes.checked = true;
+        _dispatch_("click", animales);
+        _dispatch_("click", comidas);
+        _dispatch_("click", paisajes);
+
+        img1.should.not.be.visible;
+        img2.should.not.be.visible;
+        img3.should.not.be.visible;
+        img4.should.not.be.visible;
+        img5.should.not.be.visible;
+        img6.should.not.be.visible;
+        img7.should.not.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
+      });
+      
+      
+      it("Si no seleccionamos ningún checkbox se visualizan todas las imágenes", () => {
+        _resetDocument_();
+        animales.checked = false;
+        comidas.checked = false;
+        paisajes.checked = false;
+        _dispatch_("click", animales);
+        _dispatch_("click", comidas);
+        _dispatch_("click", paisajes);
+
+        img1.should.be.visible;
+        img2.should.be.visible;
+        img3.should.be.visible;
+        img4.should.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
+      });
+      
+      it("Si seleccionamos todos los checkbox se muestran las 9 imágenes", () => {
+        _resetDocument_();
+        animales.checked = true;
+        comidas.checked = true;
+        paisajes.checked = true;
+        _dispatch_("click", animales);
+        _dispatch_("click", comidas);
+        _dispatch_("click", paisajes);
+
+        img1.should.be.visible;
+        img2.should.be.visible;
+        img3.should.be.visible;
+        img4.should.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
+      });*/
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
