@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/// Si clickeamos una imagen de 100px, se actualiza con 500px
-//si clickeamos una imagen de 100px, la imagen que tenía 500 px ahora tiene 100 px.
-
+/*<tests#*/
 //Si clickeamos una imagen de 100px, se actualiza con 500px, pero si clickeamos otra vuelve a tener 100px
 
 describe("", function() {
@@ -55,6 +53,17 @@ describe("", function() {
         _dispatch_("click", img1);
         _resetDocument_();
         img1.should.have.style('height', '500px');
+      });
+      
+      it("Si clickeamos una imagen de 100px la que anteriormente tenía 500px ahora tiene 100px", () => {
+        _dispatch_("click", img2);
+        img5.should.have.style('height', '100px');
+      });
+      
+      it("Si clickeamos una imagen de 100px se actualiza con 500px pero si clickeamos otra, vuelve a tener 100px", () => {
+        _dispatch_("click", img4);
+        _dispatch_("click", img3);
+        img4.should.have.style('height', '100px');
       });
       
     });
