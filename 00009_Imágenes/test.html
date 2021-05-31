@@ -10,19 +10,19 @@
       
       beforeEach(() => {
         _resetDocument_();
-        img1 = document.createElement('img');
+        //img1 = document.createElement('img');
         img2 = document.createElement('img');
         img3 = document.createElement('img');
         img4 = document.createElement('img');
         img5 = document.createElement('img');
       
-        document.body.appendChild(img1);
+        //document.body.appendChild(img1);
         document.body.appendChild(img2);
         document.body.appendChild(img3);
         document.body.appendChild(img4);
         document.body.appendChild(img5);
         
-        img1.style.height = '100px';
+        //img1.style.height = '100px';
         img2.style.height = '100px';
         img3.style.height = '100px';
         img4.style.height = '100px';
@@ -46,6 +46,7 @@
       });
       
       it("Si clickeamos una imagen de 100px se actualiza con 500px", () => {
+        let img1 = document.querySelectorAll('img')[0];
         _dispatch_("click", img1);
         img1.should.have.style('height', '500px');
       });
