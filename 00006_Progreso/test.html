@@ -85,11 +85,20 @@ describe("", function() {
       });
       
       it("Si la barra esta en 100% y clickeamos el botón + el width se mantiene en 100%", () => {
-        let barra = document.getElementById('barra');
-        barra.style.width = '100%'
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
         _dispatch_("click",  botonSuma);
         
-        barra.should.have.style('width','100%');
+        
+        document.getElementById('barra').should.have.style('width','100%');
       });
       
       it("Si presionamos una vez la flecha derecha el width de la barra aumenta 10%", () => {
@@ -102,12 +111,15 @@ describe("", function() {
       });
       
       it("Si presionamos una vez la flecha izquierda el width de la barra disminuye 10%", () => {
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
+        _dispatch_("click",  botonSuma);
         var event = document.createEvent('Events');
         event.initEvent('keydown', true, true);
         event.keyCode = 37;
         document.dispatchEvent(event);
           
-        document.getElementById('barra').should.have.style('width','10%');
+        document.getElementById('barra').should.have.style('width','20%');
       });
     });
   });  
