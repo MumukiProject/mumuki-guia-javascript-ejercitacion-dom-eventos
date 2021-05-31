@@ -11,13 +11,13 @@
       });
       
       it ("Cuando el scroll está en los 1001px el color del body es green",() => {
-        scroll = 1001
+        window.scrollY = 1001
         _dispatch_("scroll", window);
         document.querySelector('body').should.have.style("background-color", "green")
       });
       
       it ("Cuando el scroll está en los 500px el color del body es red",() => {
-        scroll = 500;
+        window.scrollY = 500;
         _dispatch_("scroll", window);
         document.querySelector('body').should.have.style("background-color", "red")
       });
@@ -25,13 +25,13 @@
       
       
       it ("Cuando el scroll está en los 3000px el color del body es blue",() => {
-        scroll = 3000;
+        window.scrollY = 3000;
         _dispatch_("scroll", window);
         document.querySelector('body').should.have.style("background-color", "blue")
       });
       
       it ("Cuando el scroll está en los 3001 el color del body es orange",() => {
-        scroll = 3001;
+        window.scrollY = 3001;
         _dispatch_("scroll", window);
         document.querySelector('body').should.have.style("background-color", "orange")
       });
