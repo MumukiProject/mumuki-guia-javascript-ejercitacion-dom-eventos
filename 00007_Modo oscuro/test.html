@@ -43,7 +43,7 @@ describe("", function() {
       });
       
       it("Al clickear el modo oscuro el color del texto es blanco", () => {
-        let boton = document.querySelector'button');
+        let boton = document.querySelector('button');
         _dispatch_('click',  boton);
         document.querySelector("p").should.have.style('color', 'white');
       });
