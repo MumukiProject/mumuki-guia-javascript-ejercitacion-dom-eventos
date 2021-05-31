@@ -32,9 +32,8 @@
       it("Al clickear modo oscuro el color de fondo del body es negro", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
-        let body = document.querySelector("body");
-        window.getComputedStyle(body).getPropertyValue('background-color').should.eql('black');
-        //document.querySelector("body").should.have.style('background-color', 'black');
+        document.getElementsByClassName('far fa-sun')[0].visibility = "visible";
+        document.querySelector("body").should.have.style('background-color', 'black');
       });
       
       it("Al clickear modo oscuro el color del texto es blanco", () => {
