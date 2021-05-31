@@ -1,6 +1,5 @@
 /*<output#*//*#output>*/
 /*<tests#*//*
-- Que si está en cero y restamos se mantiene en 0 el texto
 - Que si está en 100 y sumamos se mantiene en 100% el width.
 - Que al presionar la flecha izquierda una vez baje 10%.
 - Que al presionar la flecha derecha una vez sume 10%.
@@ -89,12 +88,31 @@ describe("", function() {
 
         });
         
-        it("Si clickeamos la barra esta en 0% y clickeamos el botón - el span muestra 0%", () => {
+        it("Si la barra esta en 0% y clickeamos el botón - el span se mantiene en 0%", () => {
           
           _resetDocument_();
           _dispatch_("click",  botonResta);
           
           document.querySelector("span").should.have.trimmed.text("0%");
+
+        });
+        
+        it("Si la barra esta en 100% y clickeamos el botón + el width se mantiene en 100%", () => {
+          
+          _resetDocument_();
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          
+          document.getElementById('barra').should.have.style('width','100%');
 
         });
 
