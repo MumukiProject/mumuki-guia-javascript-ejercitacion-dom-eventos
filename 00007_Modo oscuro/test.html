@@ -27,13 +27,13 @@ describe("", function() {
       })
       
       it("El texto y el título tienen tipografía Poppins", () => {
-        document.querySelector("p")should.have.style('font-family', 'Poppins');
-        document.querySelector("h1")should.have.style('font-family', 'Poppins');
+        document.querySelector("p").should.have.style('font-family', 'Poppins');
+        document.querySelector("h1").should.have.style('font-family', 'Poppins');
       })
       
       it("El texto y el título tienen un tamaño de 20px", () => {
-        document.querySelector("p")should.have.style('font-size', '20px');
-        document.querySelector("h1")should.have.style('font-size', '20px');
+        document.querySelector("p").should.have.style('font-size', '20px');
+        document.querySelector("h1").should.have.style('font-size', '20px');
       })
       
     });
