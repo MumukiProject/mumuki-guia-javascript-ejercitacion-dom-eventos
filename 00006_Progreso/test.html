@@ -12,8 +12,8 @@ describe("", function() {
       
       beforeEach(() => {
         
-        botonResta = document.getElementsByTagName('button')[0];
-        botonSuma = document.getElementsByTagName('button')[1];
+        botonResta = document.querySelectorAll('button')[0];
+        botonSuma = document.querySelectorAll('button')[1];
         
         _resetUserInteractions_();
 
@@ -40,10 +40,11 @@ describe("", function() {
         });
         
       it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
+          let boton2 = document.querySelectorAll('button')[1];
           
           _resetDocument_();
-          _dispatch_("click",  botonSuma);
-          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  boton2);
+          _dispatch_("click",  boton2);
           
           document.getElementById('barra').should.have.style('width','20%');
         });
