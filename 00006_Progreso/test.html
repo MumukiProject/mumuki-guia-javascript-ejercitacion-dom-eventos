@@ -89,7 +89,7 @@ describe("", function() {
         barra.style.width = '100%'
         _dispatch_("click",  botonSuma);
         
-        .should.have.style('width','100%');
+        barra.should.have.style('width','100%');
       });
       
       it("Si presionamos una vez la flecha derecha el width de la barra aumenta 10%", () => {
