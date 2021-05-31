@@ -42,18 +42,24 @@ describe("", function() {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.querySelector("body").should.have.style('background-color', 'black');
-      })
+      });
       
       it("Al clickear el modo oscuro el color del texto es blanco", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.querySelector("p").should.have.style('color', 'white');
-      })
+      });
       
       it("Al clickear el modo oscuro se visualiza el ícono del sol", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.getElementsByClassName('fa-sun')[0].should.be.visible;
+      });
+      
+      it("Al clickear el modo oscuro se oculta el ícono de la luna", () => {
+        let boton = document.querySelector('button');
+        _dispatch_("click",  boton);
+        document.getElementsByClassName('fa-moon')[0].should.not.be.visible;
       })
     });
   });  
