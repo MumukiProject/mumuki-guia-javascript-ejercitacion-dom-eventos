@@ -1,8 +1,5 @@
 /*<output#*//*#output>*/
 /*<tests#*//*
-
-- Que al apretar el boton - una vez disminuya 10% el width
-- Que al apretar el boton - 2 vez disminuya 20% el span.
 - Que si está en cero y restamos se mantiene en 0 el texto
 - Que si está en 100 y sumamos se mantiene en 100% el width.
 - Que al presionar la flecha izquierda una vez baje 10%.
@@ -74,6 +71,30 @@ describe("", function() {
           _dispatch_("click",  botonResta);
           
           document.getElementById('barra').should.have.style('width','20%');
+
+        });
+        
+        it("Si clickeamos cinco veces el botón + y luego clickeamos dos veces el botón - el span muestra 30%", () => {
+          
+          _resetDocument_();
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonResta);
+          _dispatch_("click",  botonResta);
+          
+          document.querySelector("span").should.have.trimmed.text("30%");
+
+        });
+        
+        it("Si clickeamos la barra esta en 0% y clickeamos el botón - el span muestra 0%", () => {
+          
+          _resetDocument_();
+          _dispatch_("click",  botonResta);
+          
+          document.querySelector("span").should.have.trimmed.text("0%");
 
         });
 
