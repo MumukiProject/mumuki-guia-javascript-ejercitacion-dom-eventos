@@ -20,15 +20,15 @@ describe("", function() {
       });
 
       it("Hay un div con el id contenedor", () => {
-       document.getElementById("contenedor").should.have.exist;
+       document.getElementById("contenedor").should.exist;
         });
         
       it("Hay un div con el id barra", () => {
-       document.getElementById("barra").should.have.exist;
+       document.getElementById("barra").should.exist;
         });
         
       it("Hay un span", () => {
-       document.querySelector("span").should.have.exist;
+       document.querySelector("span").should.exist;
         });
         
       it("El span inicialmente muestra 0%", () => {
@@ -39,7 +39,7 @@ describe("", function() {
        document.getElementsByTagName("button").length.should.eql(2);
         });
         
-        it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
+      it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
           
           _resetDocument_();
           _dispatch_("click",  botonSuma);
