@@ -93,7 +93,7 @@ describe("", function() {
       });
       
       it("Si clickeamos el botón de Acción, se muestran solo las imágenes de acción", () => {
-        let ficcion = document.getElementById('accion');
+        let accion = document.getElementById('accion');
         _dispatch_("click",  accion);
         document.querySelectorAll("img[class='accion']")[0].should.be.visible;
         document.querySelectorAll("img[class='accion']")[1].should.be.visible;
@@ -104,7 +104,7 @@ describe("", function() {
       });
       
       it("Si clickeamos el botón de Aventura, se muestran solo las imágenes de aventura", () => {
-        let ficcion = document.getElementById('aventura');
+        let aventura = document.getElementById('aventura');
         _dispatch_("click",  aventura);
         document.querySelectorAll("img[class='aventura']")[0].should.be.visible;
         document.querySelectorAll("img[class='aventura']")[1].should.be.visible;
