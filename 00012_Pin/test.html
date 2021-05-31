@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/// Hay un botón para reiniciar
-// Hay un botón para borrar
-//Hay un span
+/*<tests#*///Hay un span
 //Si presionamos el 4 y luego el 8 el span muestra 48
 //Si presionamos 6 números y luego presionamos otro número, el último no se muestra en el span.
 //Si presionamos el botón de reiniciar, todos los dígitos del span se borran.
@@ -33,6 +31,10 @@ describe("", function() {
       
       it("Hay un botón para borrar", () => {
         document.querySelectorAll('button')[11].should.have.trimmed.text("borrar");
+      });
+      
+      it("Hay un span", () => {
+        document.querySelector('span').should.exist;
       });
       
       /*it("Si pasamos por encima de una imagen de 100px se actualiza con 500px", () => {
