@@ -11,20 +11,18 @@ describe("", function() {
       let botonSuma
       
       beforeEach(() => {
-        
+        _resetDocument_();
+        _resetUserInteractions_();
         botonResta = document.querySelectorAll('button')[0];
         botonSuma = document.querySelectorAll('button')[1];
-        
-        _resetUserInteractions_();
-
       });
 
       it("Hay un div con el id contenedor", () => {
-       document.getElementById("contenedor").should.exist;
+       document.getElementById("contenedor").should.have.exist;
         });
         
       it("Hay un div con el id barra", () => {
-       document.getElementById("barra").should.exist;
+       document.getElementById("barra").should.have.exist;
         });
         
       it("Hay un span", () => {
@@ -40,11 +38,8 @@ describe("", function() {
         });
         
       it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
-          let boton2 = document.querySelectorAll('button')[1];
-          
-          _resetDocument_();
-          _dispatch_("click",  boton2);
-          _dispatch_("click",  boton2);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
           
           document.getElementById('barra').should.have.style('width','20%');
         });
