@@ -2,22 +2,22 @@
 /*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
-      let scrol;
+      let scroll;
       beforeEach(() => {
-         scrol = window.scrollY;
+         scroll = window.scrollY;
         _resetDocument_();
         _resetUserInteractions_();
 
       });
       
       it ("Cuando el scroll está en los 1001px el color del body es green",() => {
-        scrol = 1001
+        scroll = 1001
         _dispatch_("scroll", window);
         document.querySelector('body').should.have.style("background-color", "green")
       });
       
       it ("Cuando el scroll está en los 500px el color del body es red",() => {
-        scrol = 500;
+        scroll = 500;
         _dispatch_("scroll", window);
         document.querySelector('body').should.have.style("background-color", "red")
       });
