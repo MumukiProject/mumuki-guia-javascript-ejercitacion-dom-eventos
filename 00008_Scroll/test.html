@@ -17,8 +17,8 @@
       
       it ("Cuando el scroll está en los 1001px el color del body es green",() => {
         scroll = 1001;
-        _dispatch_("scroll", window);
         _resetDocument_();
+        _dispatch_("scroll", window);
         document.querySelector('body').should.have.style("background-color", "green")
       });
       
