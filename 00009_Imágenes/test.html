@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/
-// Hay una imagen con 500 px de alto
-// Si clickeamos una imagen de 100px, se actualiza con 500px
+/*<tests#*/// Si clickeamos una imagen de 100px, se actualiza con 500px
 //si clickeamos una imagen de 100px, la imagen que tenía 500 px ahora tiene 100 px.
 
 //Si clickeamos una imagen de 100px, se actualiza con 500px, pero si clickeamos otra vuelve a tener 100px
@@ -13,6 +11,7 @@ describe("", function() {
       let img2;
       let img3;
       let img4;
+      let img5;
       
       beforeEach(() => {
         _resetDocument_();
@@ -20,11 +19,19 @@ describe("", function() {
         img2 = document.createElement('img');
         img3 = document.createElement('img');
         img4 = document.createElement('img');
+        img5 = document.createElement('img');
       
         document.body.appendChild(img1);
         document.body.appendChild(img2);
         document.body.appendChild(img3);
         document.body.appendChild(img4);
+        document.body.appendChild(img5);
+        
+        img1.style.height = '100px';
+        img2.style.height = '100px';
+        img3.style.height = '100px';
+        img4.style.height = '100px';
+        img5.style.height = '500px';
       
       });
       
@@ -44,85 +51,12 @@ describe("", function() {
         document.querySelectorAll('img')[4].should.have.style('height', '500px');
       });
       
-      
-      /*it("Si seleccionamos comidas y paisajes y tenemos tres imágenes con categoría comidas y dos con categoría paisajes se muestran solo las cinco imágenes", () => {
-        animales.checked = false;
-        comidas.checked = true;
-        paisajes.checked = true;
-        _dispatch_("click", animales);
-        _dispatch_("click", comidas);
-        _dispatch_("click", paisajes);
-
-        img1.should.not.be.visible;
-        img2.should.not.be.visible;
-        img3.should.not.be.visible;
-        img4.should.not.be.visible;
-        img5.should.be.visible;
-        img6.should.be.visible;
-        img7.should.be.visible;
-        img8.should.be.visible;
-        img9.should.be.visible;
-      });
-      
-      it("Si seleccionamos paisajes y tenemos dos imágenes con la categoría paisajes se muestran solo las dos imágenes", () => {
-        animales.checked = false;
-        comidas.checked = false;
-        paisajes.checked = true;
-        _dispatch_("click", animales);
-        _dispatch_("click", comidas);
-        _dispatch_("click", paisajes);
-
-        img1.should.not.be.visible;
-        img2.should.not.be.visible;
-        img3.should.not.be.visible;
-        img4.should.not.be.visible;
-        img5.should.not.be.visible;
-        img6.should.not.be.visible;
-        img7.should.not.be.visible;
-        img8.should.be.visible;
-        img9.should.be.visible;
-      });
-      
-      
-      it("Si no seleccionamos ningún checkbox se visualizan todas las imágenes", () => {
+      it("Si clickeamos una imagen de 100px se actualiza con 500px", () => {
         _resetDocument_();
-        animales.checked = false;
-        comidas.checked = false;
-        paisajes.checked = false;
-        _dispatch_("click", animales);
-        _dispatch_("click", comidas);
-        _dispatch_("click", paisajes);
-
-        img1.should.be.visible;
-        img2.should.be.visible;
-        img3.should.be.visible;
-        img4.should.be.visible;
-        img5.should.be.visible;
-        img6.should.be.visible;
-        img7.should.be.visible;
-        img8.should.be.visible;
-        img9.should.be.visible;
+        _dispatch_("click", img1);
+        img1.should.have.style('height', '500px');
       });
       
-      it("Si seleccionamos todos los checkbox se muestran las 9 imágenes", () => {
-        _resetDocument_();
-        animales.checked = true;
-        comidas.checked = true;
-        paisajes.checked = true;
-        _dispatch_("click", animales);
-        _dispatch_("click", comidas);
-        _dispatch_("click", paisajes);
-
-        img1.should.be.visible;
-        img2.should.be.visible;
-        img3.should.be.visible;
-        img4.should.be.visible;
-        img5.should.be.visible;
-        img6.should.be.visible;
-        img7.should.be.visible;
-        img8.should.be.visible;
-        img9.should.be.visible;
-      });*/
     });
   });  
 });/*#tests>*/
