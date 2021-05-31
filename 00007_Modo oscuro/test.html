@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/
-//Al clickear el boton a modo oscuro el color del fondo del body es negro.
-//Al clickear el boton a modo oscuro el color del texto es blanco.
+/*<tests#*///Al clickear el boton a modo oscuro el color del texto es blanco.
 //Al clickear el boton a modo oscuro se visualiza el ícono del sol.
 //Al clickear el boton a modo oscuro se oculta el ícono de la luna.
 //Al clickear el boton a modo oscuro el color del ícono es blanco.
@@ -45,6 +43,12 @@ describe("", function() {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.querySelector("body").should.have.style('background-color', 'black');
+      })
+      
+      it("Al clickear el modo oscuro el color del texto es blanco", () => {
+        let boton = document.querySelector('button');
+        _dispatch_("click",  boton);
+        document.querySelector("p").should.have.style('color', 'white');
       })
       
     });
