@@ -42,7 +42,7 @@ describe("", function() {
         _dispatch_("click", cuatro);
         _dispatch_("click", ocho);
         
-        document.querySelectorAll('span')[0].should.have.trimmed.text('48');
+        document.getElementsByTagName('span')[0].should.have.trimmed.text('48');
       });
       
     });
