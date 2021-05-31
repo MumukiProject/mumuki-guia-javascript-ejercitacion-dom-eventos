@@ -86,8 +86,8 @@
         _dispatch_("click",  li8);
         _dispatch_("click",  li9);
 
-        li8.style.color.should.eql('grey');
-        li9.style.color.should.eql('grey');
+        li8.should.have.style('color', 'grey');
+        li9.should.have.style('color', 'grey');
       });
         
       it("Si clickeamos tres li dejan de estar en negrita", () => {
