@@ -86,9 +86,8 @@ describe("", function() {
       
       it("Si la barra esta en 100% y clickeamos el botón + el width se mantiene en 100%", () => {
         let barra = document.getElementById('barra');
-        barra.style.width = '10%'
+        barra.style.width = '100%'
         _dispatch_("click",  botonSuma);
-        
         
         .should.have.style('width','100%');
       });
