@@ -1,7 +1,6 @@
 /*<output#*//*#output>*/
 /*<tests#*//*
 
-- Que al apretar el boton + 4 veces sume 40% al span
 - Que al apretar el boton - una vez disminuya 10% el width
 - Que al apretar el boton - 2 vez disminuya 20% el span.
 - Que si está en cero y restamos se mantiene en 0 el texto
@@ -27,23 +26,23 @@ describe("", function() {
 
       it("Hay un div con el id contenedor", () => {
        document.getElementById("contenedor").should.have.exist;
-        })
+        });
         
       it("Hay un div con el id barra", () => {
        document.getElementById("barra").should.have.exist;
-        })
+        });
         
       it("Hay un span", () => {
        document.querySelector("span").should.have.exist;
-        })
+        });
         
       it("El span inicialmente muestra 0%", () => {
        document.querySelector("span").should.have.trimmed.text("0%");
-        })
+        });
         
       it("Hay dos botones", () => {
        document.getElementsByTagName("button").length.should.eql(2);
-        })
+        });
         
         it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
           
@@ -51,9 +50,20 @@ describe("", function() {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           
-          document.querySelector("span").should.have.trimmed.text("20%");
-          //document.getElementById('barra').should.have.style('width','20%');
-        })
+          document.getElementById('barra').should.have.style('width','20%');
+        });
+        
+        it("Si clickeamos cuatro veces el botón + el span muestra 40%", () => {
+          
+          _resetDocument_();
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          
+          document.querySelector("span").should.have.trimmed.text("40%");
+
+        });
 
     });
   });  
