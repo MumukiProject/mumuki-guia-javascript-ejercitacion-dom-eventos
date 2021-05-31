@@ -84,7 +84,10 @@ describe("", function() {
       it("Si clickeamos el botón de Ficción, se muestran solo las imágenes de fición", () => {
         let ficcion = document.getElementById('ficcion');
         _dispatch_("click",  ficcion);
-        document.querySelectorAll("img[class='ficcion']").should.have.style('visibility', 'visible');
+        document.querySelectorAll("img[class='ficcion']")[0].should.be.visible;
+        document.querySelectorAll("img[class='ficcion']")[1].should.be.visible;
+        document.querySelectorAll("img[class='ficcion']")[2].should.be.visible;
+        document.querySelectorAll("img[class='ficcion']")[3].should.be.visible;
         
       });
       
