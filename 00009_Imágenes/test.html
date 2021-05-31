@@ -1,9 +1,36 @@
 /*<output#*//*#output>*/
-/*<tests#*/describe("", function() {
+/*<tests#*/
+//Si clickeamos una imagen de 100px, se actualiza con 500px, pero si clickeamos otra vuelve a tener 100px
+
+describe("", function() {
   context("", () => {
     describe("", () => {
+      let img1;
+      let img2;
+      let img3;
+      let img4;
+      let img5;
+      
       beforeEach(() => {
         _resetDocument_();
+        img1 = document.createElement('img');
+        img2 = document.createElement('img');
+        img3 = document.createElement('img');
+        img4 = document.createElement('img');
+        img5 = document.createElement('img');
+      
+        document.body.appendChild(img1);
+        document.body.appendChild(img2);
+        document.body.appendChild(img3);
+        document.body.appendChild(img4);
+        document.body.appendChild(img5);
+        
+        img1.style.height = '100px';
+        img2.style.height = '100px';
+        img3.style.height = '100px';
+        img4.style.height = '100px';
+        img5.style.height = '500px';
+      
       });
       
       
@@ -17,26 +44,23 @@
       });
       
       it("Hay 1 imagen con 500px de alto", () => {
+        _resetDocument_();
 
         document.querySelectorAll('img')[4].should.have.style('height', '500px');
       });
       
       it("Si clickeamos una imagen de 100px se actualiza con 500px", () => {
-        let img1 = document.querySelectorAll('img')[0];
         _dispatch_("click", img1);
+        _resetDocument_();
         img1.should.have.style('height', '500px');
       });
       
       it("Si clickeamos una imagen de 100px la que anteriormente tenía 500px ahora tiene 100px", () => {
-        let img2 = document.querySelectorAll('img')[2];
-        let img5 = document.querySelectorAll('img')[4];
         _dispatch_("click", img2);
         img5.should.have.style('height', '100px');
       });
       
       it("Si clickeamos una imagen de 100px se actualiza con 500px pero si clickeamos otra, vuelve a tener 100px", () => {
-        let img4 = document.querySelectorAll('img')[3];
-        let img3 = document.querySelectorAll('img')[2];
         _dispatch_("click", img4);
         _dispatch_("click", img3);
         img4.should.have.style('height', '100px');
