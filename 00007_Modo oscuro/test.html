@@ -36,6 +36,10 @@ describe("", function() {
         document.querySelector("h1").should.have.style('font-size', '20px');
       })
       
+      it("Los elementos del body están centrados", () => {
+        document.querySelector("body").should.have.style('text-align', 'center');
+      })
+      
     });
   });  
 });/*#tests>*/
