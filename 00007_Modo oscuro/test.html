@@ -50,16 +50,16 @@
       
       it("Al clickear modo oscuro el ícono del sol es de color blanco", () => {
         let boton = document.querySelector('button');
-        _dispatch_("click",  boton);
-        document.getElementsByClassName('fa-moon')[0].should.have.style('color', 'white');
+        _dispatch_("click", boton);
+        document.getElementsByClassName('fa-sun')[0].should.have.style('color', 'white');
       });
       
       //AL CLICKEAR MODO CLARO
       
       it("Al clickear modo claro el color de fondo del body es blanco", () => {
         let boton = document.querySelector('button');
-        _dispatch_("click",  boton);
-        _dispatch_("click",  boton);
+        _dispatch_("click", boton);
+        _dispatch_("click", boton);
         document.querySelector("body").should.have.style('background-color', 'white');
       });
       
