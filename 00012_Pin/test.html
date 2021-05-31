@@ -41,7 +41,7 @@ describe("", function() {
         let ocho = document.querySelectorAll('button')[8];
         _dispatch_("click", cuatro);
         _dispatch_("click", ocho);
-        _resetDocument_();
+        
         document.querySelectorAll('span')[0].should.have.trimmed.text('48');
       });
       
