@@ -15,9 +15,9 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
-      let boton;
+      //let boton;
       beforeEach(() => {
-        boton = document.querySelector('button');
+        //boton = document.querySelector('button');
         _resetDocument_();
       });
       
@@ -40,6 +40,7 @@ describe("", function() {
       })
       
       it("Al clickear el modo oscuro el color de fondo del body es negro", () => {
+        let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.querySelector("body").should.have.style('background-color', 'black');
       })
