@@ -1,6 +1,6 @@
 /*<output#*//*#output>*/
 /*<tests#*//*
-- Que al apretar el boton + dos veces cambie a 20% el width
+
 - Que al apretar el boton + 4 veces sume 40% al span
 - Que al apretar el boton - una vez disminuya 10% el width
 - Que al apretar el boton - 2 vez disminuya 20% el span.
@@ -18,8 +18,8 @@ describe("", function() {
       
       beforeEach(() => {
         
-        botonResta= document.getElementById('resta');
-        botonSuma = document.getElementById('suma');
+        botonResta = document.querySelectorAll('button')[0];
+        botonSuma = document.querySelectorAll('button')[1];
         
         _resetUserInteractions_();
 
