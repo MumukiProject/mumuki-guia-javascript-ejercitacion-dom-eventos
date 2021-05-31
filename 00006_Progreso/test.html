@@ -37,8 +37,8 @@ describe("", function() {
         });
         
       it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
-          _resetDocument_();
-          _resetUserInteractions_();
+          
+    
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           
@@ -46,8 +46,8 @@ describe("", function() {
         });
         
         it("Si clickeamos cuatro veces el botón + el span muestra 40%", () => {
-          _resetDocument_(); 
-          _resetUserInteractions_();
+           
+    
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
@@ -62,7 +62,7 @@ describe("", function() {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonResta);
-          _resetDocument_();
+          
         
           document.getElementById('barra').should.have.style('width','20%');
 
@@ -76,7 +76,7 @@ describe("", function() {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonResta);
           _dispatch_("click",  botonResta);
-          _resetDocument_();
+          
           
           document.querySelector("span").should.have.trimmed.text("30%");
 
@@ -84,7 +84,7 @@ describe("", function() {
         
         it("Si la barra esta en 0% y clickeamos el botón - el span se mantiene en 0%", () => {
           _dispatch_("click",  botonResta);
-          _resetDocument_();
+          
           
           document.querySelector("span").should.have.trimmed.text("0%");
 
@@ -102,7 +102,7 @@ describe("", function() {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
-          _resetDocument_();
+          
           
           document.getElementById('barra').should.have.style('width','100%');
 
