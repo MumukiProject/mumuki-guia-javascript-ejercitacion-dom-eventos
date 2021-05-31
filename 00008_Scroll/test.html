@@ -19,8 +19,8 @@ describe("", function() {
       it ("Cuando el scroll está en los 500px el color del body es red",() => {
         scroll = 500;
         _dispatch_("scroll", window);
-        document.querySelector('body').should.have.style("color", "red")
-})
+        document.querySelector('body').should.have.style("background-color", "red")
+      })
     
     });
   });  
