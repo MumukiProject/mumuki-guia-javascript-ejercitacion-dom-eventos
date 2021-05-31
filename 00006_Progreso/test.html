@@ -64,6 +64,18 @@ describe("", function() {
           document.querySelector("span").should.have.trimmed.text("40%");
 
         });
+        
+        it("Si clickeamos tres veces el botón + y luego clickeamos el botón - el width queda en 20%", () => {
+          
+          _resetDocument_();
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonResta);
+          
+          document.getElementById('barra').should.have.style('width','20%');
+
+        });
 
     });
   });  
