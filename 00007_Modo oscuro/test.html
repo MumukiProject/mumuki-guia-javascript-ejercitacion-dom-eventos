@@ -1,14 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///Al clickear el boton a modo oscuro el color del ícono es blanco.
-
-//Al clickear el boton a modo oscuro el color del fondo del body es blanco.
-//Al clickear el boton a modo claro el color del texto es negro.
-//Al clickear el boton a modo claro se visualiza el ícono de la luna.
-//Al clickear el boton a modo claro el color del ícono es negro.
-//Al clickear el boton a modo oscuro se oculta el ícono del sol.
-
-
-describe("", function() {
+/*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
       //let boton;
@@ -36,34 +27,72 @@ describe("", function() {
         document.querySelector("body").should.have.style('text-align', 'center');
       })
       
-      it("Al clickear el modo oscuro el color de fondo del body es negro", () => {
+      //AL CLICKEAR EL MODO OSCURO
+      
+      it("Al clickear modo oscuro el color de fondo del body es negro", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.querySelector("body").should.have.style('background-color', 'black');
       });
       
-      it("Al clickear el modo oscuro el color del texto es blanco", () => {
+      it("Al clickear modo oscuro el color del texto es blanco", () => {
         let boton = document.querySelector('button');
         _dispatch_('click',  boton);
         document.querySelector("p").should.have.style('color', 'white');
       });
       
-      it("Al clickear el modo oscuro se visualiza el ícono del sol", () => {
+      it("Al clickear modo oscuro se visualiza el ícono del sol", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.getElementsByClassName('fa-sun')[0].should.be.visible;
       });
       
-      it("Al clickear el modo oscuro se oculta el ícono de la luna", () => {
+      it("Al clickear modo oscuro se oculta el ícono de la luna", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.getElementsByClassName('fa-moon')[0].should.not.be.visible;
       });
       
-      it("Al clickear el modo oscuro el ícono de la luna es de color blanco", () => {
+      it("Al clickear modo oscuro el ícono de la luna es de color blanco", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.getElementsByClassName('fa-moon')[0].should.have.style('color', 'white');
+      });
+      
+      //AL CLICKEAR MODO CLARO
+      
+      it("Al clickear modo claro el color de fondo del body es blanco", () => {
+        let boton = document.querySelector('button');
+        _dispatch_("click",  boton);
+        _dispatch_("click",  boton);
+        document.querySelector("body").should.have.style('background-color', 'white');
+      });
+      
+      it("Al clickear modo claro el color del texto es negro", () => {
+        let boton = document.querySelector('button');
+        _dispatch_('click',  boton);
+        _dispatch_("click",  boton);
+        document.querySelector("p").should.have.style('color', 'black');
+      });
+      
+      it("Al clickear modo oscuro se oculta el ícono del sol", () => {
+        let boton = document.querySelector('button');
+        _dispatch_("click",  boton);
+        _dispatch_("click",  boton);
+        document.getElementsByClassName('fa-sun')[0].should.not.be.visible;
+      });
+      
+      it("Al clickear modo oscuro se visualiza el ícono de la luna", () => {
+        let boton = document.querySelector('button');
+        _dispatch_("click",  boton);
+        _dispatch_("click",  boton);
+        document.getElementsByClassName('fa-moon')[0].should.be.visible;
+      });
+      
+      it("Al clickear modo oscuro el ícono del sol es de color negro", () => {
+        let boton = document.querySelector('button');
+        _dispatch_("click",  boton);
+        document.getElementsByClassName('fa-sun')[0].should.have.style('color', 'black');
       });
     });
   });  
