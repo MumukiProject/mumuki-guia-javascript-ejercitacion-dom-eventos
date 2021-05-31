@@ -32,7 +32,10 @@
       it("Al clickear modo oscuro el color de fondo del body es negro", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
-        document.querySelector("body").should.have.style('background-color', 'black');
+        
+        
+       document.querySelector("body").getComputedStyle('background-color').should.eql('black');
+        //document.querySelector("body").should.have.style('background-color', 'black');
       });
       
       it("Al clickear modo oscuro el color del texto es blanco", () => {
