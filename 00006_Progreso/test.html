@@ -36,20 +36,19 @@ describe("", function() {
         });
         
       it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
-          
-          _dispatch_("click",  botonSuma);
-          _dispatch_("click",  botonSuma);
           _resetDocument_();
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          
           document.getElementById('barra').should.have.style('width','20%');
         });
         
         it("Si clickeamos cuatro veces el botón + el span muestra 40%", () => {
-          
-          _dispatch_("click",  botonSuma);
-          _dispatch_("click",  botonSuma);
-          _dispatch_("click",  botonSuma);
-          _dispatch_("click",  botonSuma);
           _resetDocument_();
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
+          _dispatch_("click",  botonSuma);
           document.querySelector("span").should.have.trimmed.text("40%");
 
         });
