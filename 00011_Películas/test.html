@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/// Hay cuatro botones.
-//Hay un botón con un id para cada género.
-//Hay cuatro imágenes por cada género.
+/*<tests#*///Hay cuatro imágenes por cada género.
 //Al clickear el botón de "Todas" se visualizan todas las imágenes.
 //Al clickear el botón del género acción solo se muestran las imágenes correspondientes a esa clase.
 
@@ -35,6 +33,12 @@ describe("", function() {
       
       it("Hay un botón con el id ficcion", () => {
         document.querySelector("button[id='ficcion']").should.exist;
+      });
+      
+      it("Hay cuatro imágenes por género", () => {
+        document.getElementsByClassName('accion').length.should.eql(4);
+        document.getElementsByClassName('ficcion').length.should.eql(4);
+        document.getElementsByClassName('aventura').length.should.eql(4);
       });
       
     });
