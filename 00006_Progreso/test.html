@@ -105,7 +105,7 @@ describe("", function() {
         var event = document.createEvent('Events');
         event.initEvent('keydown', true, true);
         event.keyCode = 39;
-        _dispatch_(event, document);
+        document.dispatchEvent(event);
           
         document.getElementById('barra').should.have.style('width','20%');
       });
