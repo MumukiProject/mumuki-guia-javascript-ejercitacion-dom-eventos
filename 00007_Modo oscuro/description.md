@@ -1,6 +1,6 @@
 Queremos hacer una página que nos permita alternar entre modo oscuro y modo claro :last_quarter_moon_with_face: :sun_with_face:, se espera que la misma:
 
-- tenga un título, un párrafo y un botón con un ícono;
+- tenga un título h1, un párrafo y un botón con un ícono;
 - los elementos deben estar alineados en el centro;
 - el texto debe tener un tamaño de `20px`;
 - la tipografía del texto debe ser `Poppins`;
