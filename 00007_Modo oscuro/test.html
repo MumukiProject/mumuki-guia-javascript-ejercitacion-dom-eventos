@@ -53,7 +53,7 @@
         document.getElementsByClassName('fa-moon')[0].should.not.be.visible;
       });
       
-      it("Al clickear modo oscuro el ícono de la luna es de color blanco", () => {
+      it("Al clickear modo oscuro el ícono del sol es de color blanco", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         document.getElementsByClassName('fa-moon')[0].should.have.style('color', 'white');
@@ -75,24 +75,24 @@
         document.querySelector("p").should.have.style('color', 'black');
       });
       
-      it("Al clickear modo oscuro se oculta el ícono del sol", () => {
+      it("Al clickear modo claro se oculta el ícono del sol", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         _dispatch_("click",  boton);
         document.getElementsByClassName('fa-sun')[0].should.not.be.visible;
       });
       
-      it("Al clickear modo oscuro se visualiza el ícono de la luna", () => {
+      it("Al clickear modo claro se visualiza el ícono de la luna", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         _dispatch_("click",  boton);
         document.getElementsByClassName('fa-moon')[0].should.be.visible;
       });
       
-      it("Al clickear modo oscuro el ícono del sol es de color negro", () => {
+      it("Al clickear modo claro el ícono de la luna es de color negro", () => {
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
-        document.getElementsByClassName('fa-sun')[0].should.have.style('color', 'black');
+        document.getElementsByClassName('fa-moon')[0].should.have.style('color', 'black');
       });
     });
   });  
