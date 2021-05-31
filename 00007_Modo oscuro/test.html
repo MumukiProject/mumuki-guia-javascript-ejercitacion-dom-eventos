@@ -33,7 +33,7 @@
         let boton = document.querySelector('button');
         _dispatch_("click",  boton);
         let body = document.querySelector("body");
-        getComputedStyle(body).getPropertyValue('background-color').should.eql('black');
+        window.getComputedStyle(body).getPropertyValue('background-color').should.eql('black');
         //document.querySelector("body").should.have.style('background-color', 'black');
       });
       
