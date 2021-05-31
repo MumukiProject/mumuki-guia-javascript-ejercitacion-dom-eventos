@@ -11,8 +11,7 @@ describe("", function() {
       let botonSuma
       
       beforeEach(() => {
-        //_resetDocument_();
-        //_resetUserInteractions_();
+        _resetUserInteractions_();
         botonResta = document.querySelectorAll('button')[0];
         botonSuma = document.querySelectorAll('button')[1];
       });
@@ -40,6 +39,7 @@ describe("", function() {
       it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
+          _resetDocument_();
           
           document.getElementById('barra').should.have.style('width','20%');
         });
@@ -49,6 +49,7 @@ describe("", function() {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
+          _resetDocument_();
           
           document.querySelector("span").should.have.trimmed.text("40%");
 
@@ -59,7 +60,8 @@ describe("", function() {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonResta);
-          
+          _resetDocument_();
+        
           document.getElementById('barra').should.have.style('width','20%');
 
         });
@@ -72,6 +74,7 @@ describe("", function() {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonResta);
           _dispatch_("click",  botonResta);
+          _resetDocument_();
           
           document.querySelector("span").should.have.trimmed.text("30%");
 
@@ -79,6 +82,7 @@ describe("", function() {
         
         it("Si la barra esta en 0% y clickeamos el botón - el span se mantiene en 0%", () => {
           _dispatch_("click",  botonResta);
+          _resetDocument_();
           
           document.querySelector("span").should.have.trimmed.text("0%");
 
@@ -96,6 +100,7 @@ describe("", function() {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
+          _resetDocument_();
           
           document.getElementById('barra').should.have.style('width','100%');
 
