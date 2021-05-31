@@ -12,6 +12,8 @@ describe("", function() {
       
       beforeEach(() => {
         _resetDocument_();
+        botonResta = document.querySelectorAll('button')[0];
+        botonSuma = document.querySelectorAll('button')[1];
       });
 
       it("Hay un div con el id contenedor", () => {
@@ -35,8 +37,6 @@ describe("", function() {
         });
         
       it("Si clickeamos dos veces el botón + el width de la barra aumenta 20%", () => {
-          botonResta = document.querySelectorAll('button')[0];
-          botonSuma = document.querySelectorAll('button')[1];
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           
@@ -44,8 +44,7 @@ describe("", function() {
         });
         
         it("Si clickeamos cuatro veces el botón + el span muestra 40%", () => {
-          botonResta = document.querySelectorAll('button')[0];
-          botonSuma = document.querySelectorAll('button')[1];
+          
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
