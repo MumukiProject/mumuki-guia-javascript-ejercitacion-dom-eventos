@@ -1,8 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/// Los elementos están centrados
-//La tipografía del texto es Poppins.
-//El tamaño del texto es de 20px.
-
+/*<tests#*/
 //Al clickear el boton a modo oscuro el color del fondo del body es negro.
 //Al clickear el boton a modo oscuro el color del texto es blanco.
 //Al clickear el boton a modo oscuro se visualiza el ícono del sol.
@@ -38,6 +35,10 @@ describe("", function() {
       
       it("Los elementos del body están centrados", () => {
         document.querySelector("body").should.have.style('text-align', 'center');
+      })
+      
+      it("Al clickear el modo oscuro el color de fondo del body es negro", () => {
+        document.querySelector("body").should.have.style('background-color', 'black');
       })
       
     });
