@@ -52,7 +52,6 @@ describe("", function() {
       });
       
       it("Si clickeamos una imagen de 100px se actualiza con 500px", () => {
-        _resetDocument_();
         _dispatch_("click", img1);
         img1.should.have.style('height', '500px');
       });
