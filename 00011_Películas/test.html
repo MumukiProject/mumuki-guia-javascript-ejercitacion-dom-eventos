@@ -65,9 +65,20 @@ describe("", function() {
       });
       
       it("Si clickeamos el botón de Todas, se muestran todas las imágenes", () => {
-        document.getElementsByClassName('accion').length.should.eql(4);
-        document.getElementsByClassName('ficcion').length.should.eql(4);
-        document.getElementsByClassName('aventura').length.should.eql(4);
+        let todas = document.getElementById('todas');
+        _dispatch_("click",  todas);
+        img1.should.be.visible;
+        img2.should.be.visible;
+        img3.should.be.visible;
+        img4.should.be.visible;
+        img5.should.be.visible;
+        img6.should.be.visible;
+        img7.should.be.visible;
+        img8.should.be.visible;
+        img9.should.be.visible;
+        img10.should.be.visible;
+        img11.should.be.visible;
+        img12.should.be.visible;
       });
       
     });
