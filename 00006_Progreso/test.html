@@ -39,7 +39,7 @@ describe("", function() {
           
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
-          _resetAll_();
+          _resetDocument_();
           document.getElementById('barra').should.have.style('width','20%');
         });
         
@@ -49,7 +49,7 @@ describe("", function() {
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
           _dispatch_("click",  botonSuma);
-          _resetAll_();
+          _resetDocument_();
           document.querySelector("span").should.have.trimmed.text("40%");
 
         });
