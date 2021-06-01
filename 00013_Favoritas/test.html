@@ -1,11 +1,36 @@
 /*<output#*//*#output>*/
-/*<tests#*///Hay un div con título Imágenes.
-//Hay un div con título Favoritas.
-//El primer div tiene 10 imágenes.
+/*<tests#*/
 //Inicialmente el div de favoritas no tiene imágenes. 
 //Al clickear una imagen se agrega al contenedor de Favoritas.
 //Al clickear una imagen no se quita del contenedor de Imágenes.
 //Si clickeamos una imagen del contenedor de Favoritas, se elimina de dicho contenedor.
-//Si clickeamos una imagen luego de que ya fue agregada al contenedor de Favoritas, no se vuelve a agregar./*#tests>*/
+//Si clickeamos una imagen luego de que ya fue agregada al contenedor de Favoritas, no se vuelve a agregar.
+
+describe("", function() {
+  context("", () => {
+    describe("", () => {
+      beforeEach(() => {
+        _resetDocument_();
+      });
+      
+      it("Hay un div con el título Imágenes", () => {
+        document.querySelectorAll('div h1')[0].should.have.trimmed.text("Imágenes");
+      });
+      
+      it("Hay un div con el título Favoritas", () => {
+        document.querySelectorAll('div h1')[1].should.have.trimmed.text("Favoritas");
+      });
+      
+      it("El contenedor de las imaágenes tiene diez imágenes", () => {
+        document.querySelectorAll('div img')[0].length.should.eql(10);
+      });
+      
+      it("Inicialmente el contenedor de Favoritas no tiene ninguna imagen", () => {
+        document.querySelectorAll('div img')[1].length.should.eql(0);
+      });
+      
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
