@@ -32,9 +32,9 @@ describe("", function() {
       });
       
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
-        const mockMath = Object.create(global.Math);
+        /*const mockMath = Object.create(global.Math);
         mockMath.random = () => 1;
-        global.Math = mockMath;
+        global.Math = mockMath;*/
         
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
