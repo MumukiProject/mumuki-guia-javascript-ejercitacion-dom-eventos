@@ -35,13 +35,13 @@ describe("", function() {
         script.type = "text/javascript";
         let code = "Math.random = () => 1;"
         script.appendChild(document.createTextNode(code));
+        document.querySelector('head').appendChild(script);
         
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
         event.keyCode = 57;
         document.dispatchEvent(event);
         
-        document.querySelector('head').appendChild(script);
         document.querySelector('span').should.have.trimmed.text("blablabla");
       });
     });
