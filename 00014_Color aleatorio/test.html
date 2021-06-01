@@ -11,6 +11,16 @@ describe("", function() {
       beforeEach(() => {
         _resetDocument_();
       });
+      
+      it("Si presionamos la barra espaciadora se modifica el color del body", () => {
+        let colorDelBody = _originalDocument_.querySelector('body').style.color;
+        var event = document.createEvent('Events');
+        event.initEvent('keydown', true, true);
+        event.keyCode = 32;
+        document.dispatchEvent(event);
+          
+        document.querySelector('body').not.should.eql(colorDelBody);
+      });
 
       
     });
