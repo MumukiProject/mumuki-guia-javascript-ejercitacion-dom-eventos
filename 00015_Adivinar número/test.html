@@ -15,7 +15,7 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
-      Math.random = () => 1;
+      global.Math.random = () => 1;
       beforeEach(() => {
         _resetDocument_();
       });
