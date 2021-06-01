@@ -13,7 +13,6 @@ describe("", function() {
         body = document.querySelector('body');
       });
       
-      //DA FALSO POSITIVO
       it("Si presionamos la barra espaciadora se modifica el color del body", () => {
         let colorDelBodyOriginal = body.style.backgroundColor;
         var event = document.createEvent('Events');
@@ -24,7 +23,7 @@ describe("", function() {
         colorDelBodyOriginal.should.not.eql(colorDelBody);
       });
 
-      it("Si presionamos la barra espaciadora dos veces se modifica dos veces el colro del body", () => {
+      it("Si presionamos la barra espaciadora dos veces se modifica dos veces el color del body", () => {
         var event = document.createEvent('Events');
         event.initEvent('keydown', true, true);
         event.keyCode = 32;
@@ -33,6 +32,25 @@ describe("", function() {
         document.dispatchEvent(event);
         let colorDelBody2 = body.style.backgroundColor;
         colorDelBody1.should.not.eql(colorDelBody2);
+      });
+      
+      it("Los componentes del rgb se deben generar por separado", () => {
+        var event = document.createEvent('Events');
+        event.initEvent('keydown', true, true);
+        event.keyCode = 32;
+        document.dispatchEvent(event);
+        
+        let colorDelBody = body.style.backgroundColor;
+        
+        let componentesRGB = colorDelBody
+          .replace("rgb(", "")
+          .replace(")", "")
+          .split(",")
+          .map((numero) => { parseInt(numero) });
+        
+        let sonTodosIguales = componentesRGB.every((numero) => { numero == componentesRGB[0] });
+
+        sonTodosIguales.should.eql(false);
       });
     });
   });  
