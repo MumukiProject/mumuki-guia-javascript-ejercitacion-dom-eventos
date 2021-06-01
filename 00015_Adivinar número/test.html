@@ -40,7 +40,7 @@ describe("", function() {
         let script = document.createElement('script');
         script.textContent = "Math.random = () => 1;"
           
-        document.getElementsByTagName('head')[0].appendChild(script);
+        document.querySelector('head').appendChild(script);
         document.querySelector('span').should.have.trimmed.text("blablabla");
       });
     });
