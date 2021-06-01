@@ -27,7 +27,8 @@ describe("", function() {
       });
       
       it("Inicialmente el contenedor de Favoritas no tiene ninguna imagen", () => {
-        document.querySelectorAll('div img')[1].length.should.eql(0);
+        let segundoDiv = document.querySelectorAll('div')[1];
+        segundoDiv.querySelectorAll('img').length.should.eql(0);
       });
       
     });
