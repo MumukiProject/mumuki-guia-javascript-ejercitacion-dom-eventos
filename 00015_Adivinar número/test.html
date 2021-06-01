@@ -29,12 +29,12 @@ describe("", function() {
       
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
         const mockMath = Object.create(global.Math);
-        mockMath.floor = function() { return 9; };
+        mockMath.floor = function() { return 1; };
         global.Math = mockMath;
         
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
-        event.keyCode = 57;
+        event.keyCode = 49;
         document.dispatchEvent(event);
         
         document.querySelector('span').should.have.trimmed.text("HOLA MAY");
