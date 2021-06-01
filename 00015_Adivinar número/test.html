@@ -32,7 +32,16 @@ describe("", function() {
       });
       
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
+        const mockMath = Object.create(global.Math);
+        mockMath.random = () => 1;
+        global.Math = mockMath;
         
+        var event = document.createEvent('Events');
+        event.initEvent('keydown', true, true);
+        event.keyCode = 105;
+        document.dispatchEvent(event);
+        
+        document.querySelector('span').should.have.trimmed.text("HOLA MAY");
       });
       
     });
