@@ -48,7 +48,7 @@ describe("", function() {
           .split(",")
           .map((numero) => { parseInt(numero) });
 
-        let sonTodosIguales = componentesRGB.every((numero) => { numero == componentesRGB[0] });
+        let sonTodosIguales = componentesRGB.every((numero) => { numero === componentesRGB[0] });
 
         sonTodosIguales.should.eql(true);
       });
