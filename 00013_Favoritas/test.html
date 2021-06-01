@@ -37,7 +37,7 @@ describe("", function() {
         let srcImagen = imagen.getAttribute('src');
         _dispatch_("click", imagen);
         let imagenFavorita = segundoDiv.querySelector('img');
-        imagenFavorita.gettAtributte('src').eq(srcImagen);
+        imagenFavorita.getAttribute('src').eq(srcImagen);
         segundoDiv.querySelectorAll('img').length.should.eql(1);
       });
       
