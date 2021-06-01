@@ -22,6 +22,15 @@ describe("", function() {
         colorDelBodyOriginal.should.not.eql(colorDelBody);
       });
 
+      it("prueba", () => {
+        let body = document.querySelector('body');
+        var event = document.createEvent('Events');
+        event.initEvent('keydown', true, true);
+        event.keyCode = 32;
+        document.dispatchEvent(event);
+        
+        body.sarasa.should.not.eql(8);
+      });
       
     });
   });  
