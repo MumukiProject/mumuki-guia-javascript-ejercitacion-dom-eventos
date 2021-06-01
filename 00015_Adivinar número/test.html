@@ -38,6 +38,7 @@ describe("", function() {
         document.dispatchEvent(event);
         
         let script = document.createElement('script');
+        script.type = "text/javascript";
         script.textContent = "Math.random = () => 1;"
           
         document.querySelector('head').appendChild(script);
