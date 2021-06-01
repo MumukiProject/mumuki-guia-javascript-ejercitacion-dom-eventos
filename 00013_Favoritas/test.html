@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/
-//Inicialmente el div de favoritas no tiene imágenes. 
-//Al clickear una imagen se agrega al contenedor de Favoritas.
+/*<tests#*///Al clickear una imagen se agrega al contenedor de Favoritas.
 //Al clickear una imagen no se quita del contenedor de Imágenes.
 //Si clickeamos una imagen del contenedor de Favoritas, se elimina de dicho contenedor.
 //Si clickeamos una imagen luego de que ya fue agregada al contenedor de Favoritas, no se vuelve a agregar.
@@ -9,26 +7,38 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
+      let primerDiv;
+      let segundoDiv;
       beforeEach(() => {
         _resetDocument_();
+        primerDiv = document.querySelectorAll('div')[0];
+        segundoDiv = document.querySelectorAll('div')[1];
       });
       
       it("Hay un div con el título Imágenes", () => {
-        document.querySelectorAll('div h1')[0].should.have.trimmed.text("Imágenes");
+        primerDiv.querySelector('h1').should.have.trimmed.text("Imágenes");
       });
       
       it("Hay un div con el título Favoritas", () => {
-        document.querySelectorAll('div h1')[1].should.have.trimmed.text("Favoritas");
+        segundoDiv.querySelector('h1').should.have.trimmed.text("Favoritas");
       });
       
       it("El contenedor de las imágenes tiene diez imágenes", () => {
-        let primerDiv = document.querySelectorAll('div')[0];
+        
         primerDiv.querySelectorAll('img').length.should.eql(10);
       });
       
       it("Inicialmente el contenedor de Favoritas no tiene ninguna imagen", () => {
-        let segundoDiv = document.querySelectorAll('div')[1];
         segundoDiv.querySelectorAll('img').length.should.eql(0);
+      });
+      
+      it("Si clickeamos una imagen, se agrega al contenedor de Favoritas", () => {
+        let imagen = primerDiv.querySelectorAll('img')[2];
+        let srcImagen = imagen.getAttribute('src');
+        _dispatch_("click", imagen);
+        let imagenFavorita = segundoDiv.querySelector('img');
+        imagenFavorita.gettAtributte('src').eq(srcImagen);
+        segundoDiv.querySelectorAll('img').length.should.eql(1);
       });
       
     });
