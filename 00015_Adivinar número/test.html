@@ -1,9 +1,6 @@
 /*<output#*//*#output>*/
 /*<tests#*///Agregar pista para que usen keypress
 
-//Hay un span
-//Hay un botón que dice Reiniciar.
-
 //Si el número seleccionado es mayor que el número aleatorio generado el span muestra El número es más chico.
 
 //Si el número seleccionado es menor que el número aleatorio generado el span muestra El número es más grande.
@@ -12,6 +9,34 @@
 
 //Al seleccionar el botón Reiniciar se genera un nuevo número. (ESTE CAPAZ NO SE PUEDE).
 
-//Al seleccionar el botón Reiniciar el span muestra ¡Nueva partida! Presione un número./*#tests>*/
+//Al seleccionar el botón Reiniciar el span muestra ¡Nueva partida! Presione un número.
+
+
+describe("", function() {
+  context("", () => {
+    describe("", () => {
+      let primerDiv;
+      let segundoDiv;
+      beforeEach(() => {
+        _resetDocument_();
+        primerDiv = document.querySelectorAll('div')[0];
+        segundoDiv = document.querySelectorAll('div')[1];
+      });
+      
+      it("Hay un span", () => {
+        primerDiv.querySelector('span').should.exist;
+      });
+      
+      it("Hay un botón que dice Reiniciar", () => {
+        segundoDiv.querySelector('button').should.have.trimmed.text("Reiniciar");
+      });
+      
+      it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
+        
+      });
+      
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
