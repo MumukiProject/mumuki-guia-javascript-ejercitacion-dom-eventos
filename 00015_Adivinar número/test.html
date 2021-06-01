@@ -11,6 +11,8 @@
 
 //Al seleccionar el botón Reiniciar el span muestra ¡Nueva partida! Presione un número.
 
+
+document.querySelector('script').src
 Math.random = () => 1;
 
 describe("", function() {
@@ -35,6 +37,11 @@ describe("", function() {
         event.keyCode = 57;
         document.dispatchEvent(event);
         
+        let script = document.createElement('script');
+        script.onload = function() {
+          Math.random = () => 1;
+        };
+        document.appendChild(script);
         document.querySelector('span').should.have.trimmed.text("blablabla");
       });
     });
