@@ -41,7 +41,7 @@ describe("", function() {
         script.onload = function() {
           Math.random = () => 1;
         };
-        document.appendChild(script);
+        document.getElementsByTagName('head')[0].appendChild(script);
         document.querySelector('span').should.have.trimmed.text("blablabla");
       });
     });
