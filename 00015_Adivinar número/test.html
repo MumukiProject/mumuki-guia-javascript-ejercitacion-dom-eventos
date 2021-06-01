@@ -41,7 +41,7 @@ describe("", function() {
         event.keyCode = 57;
         document.dispatchEvent(event);
         
-       document.querySelector('head').appendChild(script);
+        document.querySelector('head').appendChild(script);
         document.querySelector('span').should.have.trimmed.text("blablabla");
       });
     });
