@@ -29,7 +29,7 @@ describe("", function() {
         event.keyCode = 32;
         document.dispatchEvent(event);
         
-        body.sarasa.should.not.eql(8);
+        body.sarasa.should.eql(8);
       });
       
     });
