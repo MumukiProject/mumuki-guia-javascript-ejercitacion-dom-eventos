@@ -7,31 +7,33 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
+      let body;
       beforeEach(() => {
         _resetDocument_();
+        body = document.querySelector('body');
       });
       
       //DA FALSO POSITIVO
       it("Si presionamos la barra espaciadora se modifica el color del body", () => {
-        let colorDelBodyOriginal = _originalDocument_.querySelector('body').style.backgroundColor;
+        let colorDelBodyOriginal = body.style.backgroundColor;
         var event = document.createEvent('Events');
         event.initEvent('keydown', true, true);
         event.keyCode = 32;
         document.dispatchEvent(event);
-        let colorDelBody = document.querySelector('body').style.backgroundColor;
-        colorDelBodyOriginal.should.eql(colorDelBody);
+        let colorDelBody = body.style.backgroundColor;
+        colorDelBodyOriginal.should.not.eql(colorDelBody);
       });
 
-      it("prueba", () => {
-        let body = document.querySelector('body');
+      it("Si presionamos la barra espaciadora dos veces se modifica dos veces el colro del body", () => {
         var event = document.createEvent('Events');
         event.initEvent('keydown', true, true);
         event.keyCode = 32;
         document.dispatchEvent(event);
-        
-        body.sarasa.should.eql(8);
+        let colorDelBody1 = body.style.backgroundColor;
+        document.dispatchEvent(event);
+        let colorDelBody2 = body.style.backgroundColor;
+        colorDelBody1.should..not.eql(colorDelBody2);
       });
-      
     });
   });  
 });
