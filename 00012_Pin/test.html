@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/
-//Si presionamos el botón de reiniciar, todos los dígitos del span se borran.
-//Si tenemos los números 5599 y presionamos el botón de borrar el span muestra 559.
+/*<tests#*///Si tenemos los números 5599 y presionamos el botón de borrar el span muestra 559.
 
 describe("", function() {
   context("", () => {
@@ -70,6 +68,19 @@ describe("", function() {
         _dispatch_("click", reiniciar);
         
         document.getElementsByTagName('span')[0].should.have.trimmed.text('');
+      });
+      
+      it("Si tenemos los números 5599 y presionamos el botón de borrar el span muestra 559", () => {
+        let cinco = document.querySelectorAll('button')[5];
+        let nueve = document.querySelectorAll('button')[9];
+        let borrar = document.querySelectorAll('button')[11];
+        _dispatch_("click", cinco);
+        _dispatch_("click", cinco);
+        _dispatch_("click", nueve);
+        _dispatch_("click", nueve);
+        _dispatch_("click", borrar);
+        
+        document.getElementsByTagName('span')[0].should.have.trimmed.text('559');
       });
       
     });
