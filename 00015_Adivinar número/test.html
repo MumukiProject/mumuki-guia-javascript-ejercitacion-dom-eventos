@@ -35,8 +35,8 @@ describe("", function() {
         script.type = "text/javascript";
         script.textContent = "Math.random = () => 1;"
         
-        /*script.appendChild(document.createTextNode(code));
-        document.querySelector('head' ).appendChild(script);*/
+        /*script.appendChild(document.createTextNode(code));*/
+        document.querySelector('head' ).appendChild(script);
         
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
