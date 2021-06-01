@@ -38,9 +38,8 @@ describe("", function() {
         document.dispatchEvent(event);
         
         let script = document.createElement('script');
-        script.onload = function() {
-          Math.random = () => 1;
-        };
+        script.textContent = "Math.random = () => 1;"
+          
         document.getElementsByTagName('head')[0].appendChild(script);
         document.querySelector('span').should.have.trimmed.text("blablabla");
       });
