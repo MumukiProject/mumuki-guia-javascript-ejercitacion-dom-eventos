@@ -16,7 +16,6 @@ describe("", function() {
   context("", () => {
     describe("", () => {
       global.Math.random = () => 1;
-      sinon.stub(Math, 'random').returns(1);
       beforeEach(() => {
         _resetDocument_();
       });
