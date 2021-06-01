@@ -53,6 +53,13 @@ describe("", function() {
         segundoDiv.querySelectorAll('img').length.should.eql(0);
       });
       
+      it("Si clickeamos una imagen que ya fue agregada al contenedor de Favoritas, no se vuelve a agregar", () => {
+        let imagen = primerDiv.querySelectorAll('img')[6];
+        _dispatch_("click", imagen);
+        _dispatch_("click", imagen);
+        segundoDiv.querySelectorAll('img').length.should.eql(1);
+      });
+      
     });
   });  
 });/*#tests>*/
