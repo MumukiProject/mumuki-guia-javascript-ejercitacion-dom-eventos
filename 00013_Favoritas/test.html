@@ -1,6 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///Al clickear una imagen no se quita del contenedor de Imágenes.
-//Si clickeamos una imagen del contenedor de Favoritas, se elimina de dicho contenedor.
+/*<tests#*///Si clickeamos una imagen del contenedor de Favoritas, se elimina de dicho contenedor.
 //Si clickeamos una imagen luego de que ya fue agregada al contenedor de Favoritas, no se vuelve a agregar.
 
 describe("", function() {
@@ -44,6 +43,14 @@ describe("", function() {
         let imagen = primerDiv.querySelectorAll('img')[5];
         _dispatch_("click", imagen);
         primerDiv.querySelectorAll('img').length.should.eql(10);
+      });
+      
+      it("Si clickeamos una imagen del contenedor de favoritas, se elimina del mismo", () => {
+        let imagen = primerDiv.querySelectorAll('img')[2];
+        _dispatch_("click", imagen);
+        let imagenFav = segundoDiv.querySelector('img');
+        _dispatch_("click", imagenFav);
+        segundoDiv.querySelectorAll('img').length.should.eql(0);
       });
       
     });
