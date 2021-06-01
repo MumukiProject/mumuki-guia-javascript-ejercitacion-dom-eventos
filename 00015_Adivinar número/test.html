@@ -38,7 +38,7 @@ describe("", function() {
         
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
-        event.keyCode = 102;
+        event.keyCode = 57;
         document.dispatchEvent(event);
         
         document.querySelector('span').should.have.trimmed.text("HOLA MAY");
