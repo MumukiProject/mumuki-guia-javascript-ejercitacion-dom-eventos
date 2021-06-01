@@ -1,6 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///Al presionar la barra espaciadora se modifica el color del body
-
+/*<tests#*/
 //Al presionar la barra espaciadora dos veces se modifica el color del body dos veces
 
 //Los valores de rgb se generan independientemente
@@ -12,6 +11,7 @@ describe("", function() {
         _resetDocument_();
       });
       
+      //DA FALSO POSITIVO
       it("Si presionamos la barra espaciadora se modifica el color del body", () => {
         let colorDelBodyOriginal = _originalDocument_.querySelector('body').style.backgroundColor;
         var event = document.createEvent('Events');
