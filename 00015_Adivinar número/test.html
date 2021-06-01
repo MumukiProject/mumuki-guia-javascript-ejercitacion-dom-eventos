@@ -37,8 +37,8 @@ describe("", function() {
         global.Math = mockMath;
         
         var event = document.createEvent('Events');
-        event.initEvent('keydown', true, true);
-        event.keyPress = 105;
+        event.initEvent('keypress', true, true);
+        event.keyCode = 102;
         document.dispatchEvent(event);
         
         document.querySelector('span').should.have.trimmed.text("HOLA MAY");
