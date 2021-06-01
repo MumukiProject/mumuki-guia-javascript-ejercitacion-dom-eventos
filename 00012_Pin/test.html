@@ -1,5 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///Si presionamos 6 números y luego presionamos otro número, el último no se muestra en el span.
+/*<tests#*/
 //Si presionamos el botón de reiniciar, todos los dígitos del span se borran.
 //Si tenemos los números 5599 y presionamos el botón de borrar el span muestra 559.
 
@@ -42,6 +42,34 @@ describe("", function() {
         _dispatch_("click", ocho);
         
         document.getElementsByTagName('span')[0].should.have.trimmed.text('48');
+      });
+      
+      it("Si presionamos el 4 y luego el 8 el span muestra 48", () => {
+        let cuatro = document.querySelectorAll('button')[4];
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        
+        document.getElementsByTagName('span')[0].should.have.trimmed.text('444444');
+      });
+      
+      it("Si presionamos el botón de reiniciar los números del span se borran", () => {
+        let cuatro = document.querySelectorAll('button')[4];
+        let reiniciar = document.querySelectorAll('button')[10];
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", cuatro);
+        _dispatch_("click", reiniciar);
+        
+        document.getElementsByTagName('span')[0].should.have.trimmed.text('');
       });
       
     });
