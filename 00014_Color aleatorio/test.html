@@ -19,7 +19,7 @@ describe("", function() {
         event.keyCode = 32;
         document.dispatchEvent(event);
         let colorDelBody = document.querySelector('body').style.backgroundColor;
-        colorDelBody.not.should.eql(colorDelBodyOriginal);
+        colorDelBodyOriginal.not.should.eql('colorDelBody');
       });
 
       
