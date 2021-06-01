@@ -15,20 +15,16 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
-      let primerDiv;
-      let segundoDiv;
       beforeEach(() => {
         _resetDocument_();
-        primerDiv = document.querySelectorAll('div')[0];
-        segundoDiv = document.querySelectorAll('div')[1];
       });
       
       it("Hay un span", () => {
-        primerDiv.querySelector('span').should.exist;
+        document.querySelector('span').should.exist;
       });
       
       it("Hay un botón que dice Reiniciar", () => {
-        segundoDiv.querySelector('button').should.have.trimmed.text("Reiniciar");
+        document.querySelector('button').should.have.trimmed.text("Reiniciar");
       });
       
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
