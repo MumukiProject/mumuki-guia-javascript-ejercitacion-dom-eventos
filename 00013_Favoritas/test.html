@@ -21,8 +21,9 @@ describe("", function() {
         document.querySelectorAll('div h1')[1].should.have.trimmed.text("Favoritas");
       });
       
-      it("El contenedor de las imaágenes tiene diez imágenes", () => {
-        document.querySelectorAll('div img')[0].length.should.eql(10);
+      it("El contenedor de las imágenes tiene diez imágenes", () => {
+        let primerDiv = document.querySelectorAll('div')[0];
+        primerDiv('img').length.should.eql(10);
       });
       
       it("Inicialmente el contenedor de Favoritas no tiene ninguna imagen", () => {
