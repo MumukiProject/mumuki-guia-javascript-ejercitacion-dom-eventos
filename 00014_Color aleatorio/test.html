@@ -13,12 +13,12 @@ describe("", function() {
       });
       
       it("Si presionamos la barra espaciadora se modifica el color del body", () => {
-        let colorDelBodyOriginal = _originalDocument_.querySelector('body').style.color;
+        let colorDelBodyOriginal = _originalDocument_.querySelector('body').style.backgroundColor;
         var event = document.createEvent('Events');
         event.initEvent('keydown', true, true);
         event.keyCode = 32;
         document.dispatchEvent(event);
-        let colorDelBody = document.querySelector('body').style.color;
+        let colorDelBody = document.querySelector('body').style.backgroundColor;
         colorDelBody.not.should.eql(colorDelBodyOriginal);
       });
 
