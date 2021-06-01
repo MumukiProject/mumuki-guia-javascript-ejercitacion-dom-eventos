@@ -50,7 +50,7 @@ describe("", function() {
         console.log(componentesRGB);
         let sonTodosIguales = componentesRGB.every((numero) => { numero == componentesRGB[0] });
 
-        sonTodosIguales.should.be.false();
+        sonTodosIguales.should.be.eql(false);
       });
     });
   });  
