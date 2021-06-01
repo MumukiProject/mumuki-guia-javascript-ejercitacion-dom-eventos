@@ -28,11 +28,11 @@ describe("", function() {
       });
       
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
-        global.Math.floor = () => 1;
+        global.Math.random = () => 1;
         
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
-        event.keyCode = 49;
+        event.keyCode = 57;
         document.dispatchEvent(event);
         
         document.querySelector('span').should.have.trimmed.text("HOLA MAY");
