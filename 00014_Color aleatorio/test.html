@@ -42,11 +42,7 @@ describe("", function() {
         
         let colorDelBody = body.style.backgroundColor;
         
-        let componentesRGB = colorDelBody
-          .replace("rgb(", "")
-          .replace(")", "")
-          .split(",")
-          .map((numero) => { parseInt(numero) });
+        let componentesRGB = colorDelBody.replace("rgb(", "").replace(")", "").split(",").map((numero) => { parseInt(numero) });
 
         let sonTodosIguales = componentesRGB[0] == componentesRGB[1] && componentesRGB[0] == componentesRGB[2] && componentesRGB[1] == componentesRGB[2];
 
