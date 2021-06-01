@@ -43,7 +43,7 @@ describe("", function() {
       it("Si clickeamos una imagen, no se borra del contenedor de las imágenes", () => {
         let imagen = primerDiv.querySelectorAll('img')[5];
         _dispatch_("click", imagen);
-        primerDiv.querySelector('imagen').should.exist;
+        primerDiv.length.should.eql(10);;
       });
       
     });
