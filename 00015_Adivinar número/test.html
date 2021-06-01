@@ -15,6 +15,7 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
+      global.Math.random = () => 1;
       beforeEach(() => {
         _resetDocument_();
       });
@@ -28,7 +29,7 @@ describe("", function() {
       });
       
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
-        global.Math.random = () => 1;
+        
         
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
