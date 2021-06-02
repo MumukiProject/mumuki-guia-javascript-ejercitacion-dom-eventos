@@ -39,12 +39,29 @@ describe("", function() {
         
         document.head.appendChild(scriptNuevo);
         
+        var event = document.createEvent('Events');
+        event.initEvent('keypress', true, true);
+        event.keyCode = 57;
+        document.dispatchEvent(event);
+        
+        document.querySelector('span').should.have.trimmed.text("blablabla");
+      });
+      
+      it("prueba", () => {
+        let scriptNuevo = document.createElement('script');
+        scriptNuevo.type = "text/javascript";
+        scriptNuevo.textContent = "Math.random = () => 1;"
+        
+        /*scriptNuevo.appendChild(document.createTextNode(code));*/
+        
+        document.head.appendChild(scriptNuevo);
+        
         /*var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
         event.keyCode = 57;
         document.dispatchEvent(event);*/
         
-        document.querySelector('script').should.have.trimmed.text("blablabla");
+        document.querySelector('script').should.eql("blablabla");*/
       });
     });
   });  
