@@ -19,12 +19,11 @@ describe("", function() {
   context("", () => {
     describe("", () => {
       beforeEach(() => {
-        
+        _resetDocument_();
         let scriptNuevo = document.createElement('script');
         scriptNuevo.type = "text/javascript";
         scriptNuevo.text = "Math.random = () => 1;"
         document.head.appendChild(scriptNuevo);
-        _resetDocument_();
       });
       
       it("Hay un span", () => {
