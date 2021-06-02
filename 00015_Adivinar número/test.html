@@ -35,8 +35,6 @@ describe("", function() {
       });
       
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
-        
-        
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
         event.keyCode = 57;
@@ -46,22 +44,10 @@ describe("", function() {
       });
       
       it("prueba", () => {
-        let scriptNuevo = document.createElement('script');
-        scriptNuevo.type = "text/javascript";
-        scriptNuevo.textContent = "Math.random = () => 1;"
-        
-        document.head.appendChild(scriptNuevo);
-        
         Math.random().should.eql(0.2);
       });
       
       it("prueba 2", () => {
-        let scriptNuevo = document.createElement('script');
-        scriptNuevo.type = "text/javascript";
-        scriptNuevo.textContent = "Math.random = () => 1;"
-        
-        document.head.appendChild(scriptNuevo);
-        
         document.querySelectorAll('script')[0].should.have.trimmed.text("hola");
       });
     });
