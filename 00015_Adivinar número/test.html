@@ -33,9 +33,9 @@ describe("", function() {
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
         let scriptNuevo = document.createElement('script');
         scriptNuevo.type = "text/javascript";
-        let code = "Math.random = () => 1;"
+        script.textContent = "Math.random = () => 1;"
         
-        scriptNuevo.appendChild(document.createTextNode(code));
+        /*scriptNuevo.appendChild(document.createTextNode(code));*/
         
         document.head.appendChild(scriptNuevo);
         
