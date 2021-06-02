@@ -50,7 +50,7 @@ describe("", function() {
       
       it("prueba 3", () => {
         Math.random = () => 1;
-        aleatorio().should.eql(0.2);
+        window.aleatorio().should.eql(0.2);
       });
     });
   });  
