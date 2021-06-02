@@ -37,6 +37,8 @@ describe("", function() {
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
+        event.keyCode = 27;
+        document.dispatchEvent(event);
         event.keyCode = 57;
         document.dispatchEvent(event);
         
