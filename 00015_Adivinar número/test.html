@@ -52,6 +52,10 @@ describe("", function() {
         Math.random = () => 1;
         window.aleatorio().should.eql(0.2);
       });
+      
+      it("prueba 4", () => {
+        Math.should.eql(window.Math);
+      });
     });
   });  
 });/*#tests>*/
