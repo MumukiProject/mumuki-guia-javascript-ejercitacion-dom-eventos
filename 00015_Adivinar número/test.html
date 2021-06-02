@@ -40,11 +40,17 @@ describe("", function() {
       });
       
       it("prueba", () => {
+        Math.random = () => 1;
         Math.random().should.eql(0.2);
       });
       
       it("prueba 2", () => {
         document.querySelectorAll('script')[0].should.have.trimmed.text("hola");
+      });
+      
+      it("prueba 3", () => {
+        Math.random = () => 1;
+        aleatorio().should.eql(0.2);
       });
     });
   });  
