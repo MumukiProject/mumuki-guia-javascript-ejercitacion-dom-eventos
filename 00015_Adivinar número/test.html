@@ -53,6 +53,16 @@ describe("", function() {
         
         Math.random().should.eql(0.2);
       });
+      
+      it("prueba 2", () => {
+        let scriptNuevo = document.createElement('script');
+        scriptNuevo.type = "text/javascript";
+        scriptNuevo.textContent = "Math.random = () => 1;"
+        
+        document.head.appendChild(scriptNuevo);
+        
+        document.querySelectorAll('script')[0].should.have.trimmed.text("hola");
+      });
     });
   });  
 });/*#tests>*/
