@@ -31,34 +31,13 @@ describe("", function() {
       });
       
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
+        Math.random = () => 1;
         let event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
         event.keyCode = 57;
         document.dispatchEvent(event);
         
         document.querySelector('span').should.have.trimmed.text("blablabla");
-      });
-      
-      it("prueba", () => {
-        Math.random = () => 1;
-        Math.random().should.eql(0.2);
-      });
-      
-      it("prueba 2", () => {
-        document.querySelectorAll('script')[0].should.have.trimmed.text("hola");
-      });
-      
-      it("prueba 3", () => {
-        window.matematica.random = () => 1;
-        window.aleatorio().should.eql(0.2);
-      });
-      
-      it("prueba 4", () => {
-        Math.should.eql(window.Math);
-      });
-      
-      it("prueba 5", () => {
-        Math.random.should.eql(window.gustavo().random);
       });
     });
   });  
