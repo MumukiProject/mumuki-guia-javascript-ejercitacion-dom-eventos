@@ -18,12 +18,12 @@ Math.random = () => 1;
 describe("", function() {
   context("", () => {
     describe("", () => {
+      let scriptNuevo = document.createElement('script');
+      scriptNuevo.type = "text/javascript";
+      scriptNuevo.text = "Math.random = () => 1;"
+      document.head.appendChild(scriptNuevo);
       beforeEach(() => {
         _resetDocument_();
-        let scriptNuevo = document.createElement('script');
-        scriptNuevo.type = "text/javascript";
-        scriptNuevo.text = "Math.random = () => 1;"
-        document.head.appendChild(scriptNuevo);
       });
       
       it("Hay un span", () => {
