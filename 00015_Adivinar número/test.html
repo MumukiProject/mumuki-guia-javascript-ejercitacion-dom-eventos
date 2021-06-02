@@ -37,7 +37,7 @@ describe("", function() {
         
         /*scriptNuevo.appendChild(document.createTextNode(code));*/
         
-        _originalDocument_.head.appendChild(scriptNuevo);
+        document.head.appendChild(scriptNuevo);
         
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
@@ -54,7 +54,7 @@ describe("", function() {
         
         /*scriptNuevo.appendChild(document.createTextNode(code));*/
         
-        _originalDocument_.head.appendChild(scriptNuevo);
+        document.head.appendChild(scriptNuevo);
         
         /*var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
