@@ -61,7 +61,7 @@ describe("", function() {
         event.keyCode = 57;
         document.dispatchEvent(event);*/
         
-        document.querySelector('script').should.eql("blablabla");
+        document.querySelector('script').should.have.trimmed.text("blablabla");
       });
     });
   });  
