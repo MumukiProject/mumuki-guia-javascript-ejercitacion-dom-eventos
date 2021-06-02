@@ -49,7 +49,7 @@ describe("", function() {
       });
       
       it("prueba 3", () => {
-        Math.random = () => 1;
+        window.matematica.random = () => 1;
         window.aleatorio().should.eql(0.2);
       });
       
