@@ -38,6 +38,7 @@ describe("", function() {
         var event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
         event.keyCode = 57;
+        Math.random = () => 1;
         document.dispatchEvent(event);
         
         document.querySelector('span').should.have.trimmed.text("blablabla");
