@@ -24,7 +24,7 @@ describe("", function() {
       	event.keyCode = 48;
       	document.dispatchEvent(event);
       	let textoDelSpan = document.querySelector('span').textContent; 
-      	let textosPosibles = ["Adivinaste. Número ingresado: 0", "El número es más grande. Número ingresado: 0"];
+      	let textosPosibles = ["Adivinaste. Número ingresado: 1", "El número es más grande. Número ingresado: 1"];
       	textosPosibles.includes(textoDelSpan).should.eql(true);
       });
     });
