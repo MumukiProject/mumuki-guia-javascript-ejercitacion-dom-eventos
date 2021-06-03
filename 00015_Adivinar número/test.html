@@ -37,6 +37,16 @@ describe("", function() {
       	let textosPosibles = ["Adivinaste. Número ingresado: 9", "El número es más chico. Número ingresado: 9"];
       	textosPosibles.includes(textoDelSpan).should.eql(true);
       });
+      
+      it("Si el número ingresado es el 5 el span nos puede decir que adivinamos, que el número es más chico o que es más grande", () => {
+      	let event = document.createEvent('Events');
+      	event.initEvent('keypress', true, true);
+      	event.keyCode = 53;
+      	document.dispatchEvent(event);
+      	let textoDelSpan = document.querySelector('span').textContent; 
+      	let textosPosibles = ["Adivinaste. Número ingresado: 5", "El número es más chico. Número ingresado: 5", "El número es más grande. Número ingresado: 5"];
+      	textosPosibles.includes(textoDelSpan).should.eql(true);
+      });
     });
   });  
 });/*#tests>*/
