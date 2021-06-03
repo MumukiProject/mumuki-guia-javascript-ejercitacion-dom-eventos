@@ -27,7 +27,6 @@ describe("", function() {
       });
       
       it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
-        window.matematica.random = () => 1;
         let event = document.createEvent('Events');
         event.initEvent('keypress', true, true);
         event.keyCode = 57;
