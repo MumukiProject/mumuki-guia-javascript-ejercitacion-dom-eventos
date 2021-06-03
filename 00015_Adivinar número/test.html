@@ -18,13 +18,23 @@ describe("", function() {
         document.querySelector('button').should.have.trimmed.text("Reiniciar");
       });
       
-      it("Si el número ingresado es el cero el span nos puede decir que adivinamos o que el número es más grande.", () => {
+      it("Si el número ingresado es el 0 el span nos puede decir que adivinamos o que el número es más grande", () => {
       	let event = document.createEvent('Events');
       	event.initEvent('keypress', true, true);
       	event.keyCode = 48;
       	document.dispatchEvent(event);
       	let textoDelSpan = document.querySelector('span').textContent; 
       	let textosPosibles = ["Adivinaste. Número ingresado: 0", "El número es más grande. Número ingresado: 0"];
+      	textosPosibles.includes(textoDelSpan).should.eql(true);
+      });
+      
+      it("Si el número ingresado es el 9 el span nos puede decir que adivinamos o que el número es más chico", () => {
+      	let event = document.createEvent('Events');
+      	event.initEvent('keypress', true, true);
+      	event.keyCode = 57;
+      	document.dispatchEvent(event);
+      	let textoDelSpan = document.querySelector('span').textContent; 
+      	let textosPosibles = ["Adivinaste. Número ingresado: 9", "El número es más chico. Número ingresado: 9"];
       	textosPosibles.includes(textoDelSpan).should.eql(true);
       });
     });
