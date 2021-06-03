@@ -1,14 +1,6 @@
 /*<output#*//*#output>*/
 /*<tests#*///Agregar pista para que usen keypress
 
-//Si el número seleccionado es mayor que el número aleatorio generado el span muestra El número es más chico.
-
-//Si el número seleccionado es menor que el número aleatorio generado el span muestra El número es más grande.
-
-//Si el número seleccionado es igual al número aleatorio generado el span muestra Adivinaste.
-
-//Al seleccionar el botón Reiniciar se genera un nuevo número. (ESTE CAPAZ NO SE PUEDE).
-
 //Al seleccionar el botón Reiniciar el span muestra ¡Nueva partida! Presione un número.
 
 describe("", function() {
@@ -26,13 +18,14 @@ describe("", function() {
         document.querySelector('button').should.have.trimmed.text("Reiniciar");
       });
       
-      it("Si el número ingresado es mayor al número aleatorio muestra El número es más chico. Número ingresado: ${numeroIngresado}", () => {
-        let event = document.createEvent('Events');
-        event.initEvent('keypress', true, true);
-        event.keyCode = 48;
-        document.dispatchEvent(event);
-        
-        document.querySelector('span').should.have.trimmed.text("blablabla");
+      it("Si el número ingresado es el cero el span nos puede decir que adivinamos o que el número es más grande.", () => {
+      	let event = document.createEvent('Events');
+      	event.initEvent('keypress', true, true);
+      	event.keyCode = 48;
+      	document.dispatchEvent(event);
+      	let textoDelSpan = document.querySelector('span').textContent; 
+      
+      	textoDelSpan.should.eql("blablabla");
       });
     });
   });  
